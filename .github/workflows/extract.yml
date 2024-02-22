@@ -1,4 +1,4 @@
-name: Extract and Move
+name: Extract, Move, and Commit
 
 on:
   push:
@@ -6,13 +6,26 @@ on:
       - main
 
 jobs:
-  extract_and_move:
+  extract_move_commit:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Extract BedWars.zip
       run: |
         unzip BedWars.zip
+        mv BedWars/* .
+        rm -r BedWars
+
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Commit changes
+      run: |
+        git add .
+        git commit -m "."
+        git push
