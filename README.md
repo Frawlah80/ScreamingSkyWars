@@ -1,4 +1,4 @@
-# BedWars
+# Screaming SkyWars
 SkyWars plugin for 1.8.8-whatever.the.latestversion
 
 ## Support
