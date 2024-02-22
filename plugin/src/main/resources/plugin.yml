@@ -18,10 +18,10 @@
 #
 
 main: org.screamingsandals.bedwars.Main
-name: BedWars
+name: ScreamingSkyWars
 version: "@version@"
 authors:
-  - "ScreamingSandals <Misat11, Iamceph, Pronze>"
+  - "Frawlah, Lort533"
 api-version: 1.13
 load: POSTWORLD
 softdepend:
