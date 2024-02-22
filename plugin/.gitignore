@@ -1,8 +1,0 @@
-target/
-target/*
-.settings/
-.settings/*
-.project
-.classpath
-dependency-reduced-pom.xml
-test-environment/
