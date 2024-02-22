@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 
-concurrency: bedwars_main
+concurrency: skywars_main
 
 jobs:
   build:
@@ -33,4 +33,4 @@ jobs:
       - name: Upload the final artifact
         uses: actions/upload-artifact@v4
         with:
-          path: plugin/build/libs/SkyWars*[!s].jar
+          path: plugin/build/libs/BedWars*[!s].jar
