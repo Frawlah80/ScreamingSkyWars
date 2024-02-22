@@ -1,12 +1,12 @@
-name: Extract, Move, and Commit
+name: Extract BedWars.zip
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'BedWars.zip'
 
 jobs:
-  extract_move_commit:
+  extract_bedwars:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,13 +19,10 @@ jobs:
         mv BedWars/* .
         rm -r BedWars
 
-    - name: Configure Git
+    - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-
-    - name: Commit changes
-      run: |
         git add .
-        git commit -m "."
+        git commit -m "SkyWars"
         git push
