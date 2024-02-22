@@ -1,0 +1,457 @@
+#
+# Copyright (C) 2023 ScreamingSandals
+#
+# This file is part of Screaming BedWars.
+#
+# Screaming BedWars is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# Screaming BedWars is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with Screaming BedWars. If not, see <https://www.gnu.org/licenses/>.
+#
+
+lang_name: "Українська мова"
+prefix: "[BW]"
+item_shop_name: "Магазин"
+join: "%name% &aПідключився до гри!&r &7[&a%players%&7/&a%maxplayers%&7]"
+leave: "%name% &cВийшов з гри!"
+game_already_running: "&cГра &7%arena% &c вже запущена! Ви не можете приєднатися до\
+  \ запущеної гри!"
+game_is_full: "&cГра &7%арена% &cуже заповнена! Будь ласка, дочекайтеся закінчення\
+  \ гри!"
+unknown_command: "&cНевідома команда! Введіть &4/bw help &cдля детальної інформації\
+  \ про всі команди!"
+unknown_usage: "&cКількість аргументів не відповідає правильній кількості або невідомі\
+  \ аргументи! Введіть&4/bw help &cдля детальної інформації про всі команди!"
+no_arena_found: "&cГра не знайдена!"
+usage_bw_join: "&cВикористання: /bw join <arena>"
+usage_bw_admin: "&cВикористання: /bw admin <arena> <add|edit|remove|save|...> ..."
+you_arent_in_game: "&cВи не в грі!"
+allready_exists: "&cАрена вже існує!"
+allready_working_on_it: "&cАрена вже є, але вона ще не добудована!"
+arena_not_in_edit: "&cАрена не існує або вона запущена! Деактивуйте її командою &7/bw\
+  \ admin <arena> edit&c, а потім активуйте командою &7/bw admin <arena> save"
+no_permissions: "&cВи не маєте прав, аби це зробити!"
+arena_must_be_in_edit_mode: "&cАрена повинна бути в режимі редагування!"
+arena_removed: "&c&lАрену видалено!"
+arena_added: "&aАрену добавлено!"
+arena_switched_to_edit: "&aАрену переключено до режиму редагування!"
+bed_is_destroyed: "Ліжко команди %team%&r було знищено!"
+target_is_destroyed: "Цільовий блок %team%&r знищений!"
+anchor_is_destroyed: "Якір респауна команди %team%&r знищений!"
+cake_is_destroyed: "Торт команди %team%&r з'їдено!"
+bed_is_destroyed_subtitle: "Тепер ви можете вбивати членів команди!"
+bed_is_destroyed_subtitle_for_victim: "Тепер ви не зможете відродитись!"
+game_is_rebuilding: "&cГра &7%arena%&c відновлюється! Будь ласка, зачекайте..."
+vault_deposite: "&aДодано &7%coins% %currency%&a до вашого Vault аккаунту!"
+shop_back: "&cПовернутися до списку категорій"
+game_start_title: "&aГра почалсь!"
+game_start_subtitle: "&aГра &7%arena% почалась! Насолоджуйтесь грою!"
+bossbar_waiting: "&cГра незабаром розпочнеться!"
+bossbar_running: "&aГру розпочато! Удачі!"
+you_are_already_in_some_game: "&cВи вже берете участь в грі."
+you_are_not_in_game_yet: "&cВи ще не грали в жодній грі."
+game_is_gone: "&cСхоже, що гри, в яку ви грали, більше немає в цьому світі."
+game_kicked_by_vip: "&cТебе вигнав VIP-гравець!"
+respawn_protection_remaining: "&aЗахист зникне за &f%time% &aсекунд!"
+respawn_protection_end: "&cЗахист від респауна зник!"
+there_is_no_empty_game: "&cУ стані очікування немає жодної гри. Всі ігри вже запущені!"
+respawn_cooldown_title: "&aРеспавн за: &c%time%"
+respawn_cooldown_title_cancel: "&cКоманда загинула :("
+vip_not_enough_players: "&cНе вистачає гравців на арені!"
+vip_game_is_full: "&cУ грі &7%arena% &cповно VIP-гравців. Будь ласка, дочекайтеся\
+  \ закінчення гри!"
+buy_succes: "&aУспішно придбано &7%item%&a за &7%material%&a!"
+buy_failed: "&cНе вистачає матеріалу для купівлі &7%item%&c! Потрібен &7%material%&c!"
+compass_selector_team: "&aВибрати команду"
+leave_from_game_item: "&cПокинути гру"
+start_game_item: "&2Розпочати гру"
+team_selection_name: "Виберіть команду - %arena%"
+team_selected: "&aВибрана команда: %team%&r &7[&a%players%&7/&a%maxplayers%&7]"
+team_already_selected: "&aВи вже в команді: %team%&r &7[&a%players%&7/&a%maxplayers%&7]"
+team_is_full: "&cКоманда %team%&c вже повна!"
+team_is_full_you_are_staying: "&cКоманда %team%&c вже повна, Ти залишаєшся в %oldteam%&c!"
+team_select_item: "%teamName% &7(&e%inTeam% &f/ &e%maxInTeam%&7)"
+team_select_item_lore: "&f---------------------"
+team_select_item_lore_full: "&fКоманда повна!"
+team_select_item_lore_join: "Click to join the team!"
+you_won: "&aТвоя команда перемогла!"
+you_lost: "&cТвоя команда програла!"
+team_win: "&aКоманда &r%team%&aвиграла в грі за час &7%time%"
+game_end: "&cГра закінчилась! Дякуємо за гру!"
+command_is_not_allowed: "&cЦя команда заблокована під час гри!"
+price: "Ціна:"
+amount: "Кількість:"
+resource_bronze: "Бронза"
+resource_iron: "Залізо"
+resource_gold: "Gold"
+resource_netherite: "Незерит"
+countdown_spawning: "&e%seconds% &bсекунд"
+every_second_spawning: "&bкожну секунду"
+spawner_is_full: "§c§lСпавнер заповнений"
+spawner_not_enough_level: "§cСпавнер не працює! Вам необхідно підвищити рівень на\
+  \ %levels% рівнів."
+admin_command_mainlobby_info: "&cУВАГА&f: Вам потрібно виконати /bw reload щоб головне\
+  \ лоббі запрацювало!"
+admin_command_success: "&aКоманду виконано успішно!"
+admin_command_must_be_in_same_world: "&cВсі команди повинні бути викликані з одного\
+  \ світу!"
+admin_command_invalid_countdown: "&cВиведення повинно бути в межах 10 < x < 600 секунд!"
+admin_command_invalid_countdown2: "&cВідрахування повинно бути в межах 10 < х < 3600\
+  \ секунд!"
+admin_command_spawn_must_be_in_area: "&cЛокація повинна бути розміщена всередині арени\
+  \ (координати pos1 та pos2)!"
+admin_command_set_pos1_pos2_first: "&cПеред встановленням спауну, будь ласка, встановіть\
+  \ координати pos1 та pos2 (Визначення розміру та положення арени)!"
+admin_command_pos1_pos2_difference_must_be_higher: "&cЗанадто мала висота між pos1\
+  \ і pos2! Мінімум 5 блоків!"
+admin_command_game_saved_and_started: "&aГра успішно збережено та запущено! Тепер\
+  \ ви можете приєднатися та грати на арені!"
+admin_command_store_already_exists: "&cТут магазин вже існує!"
+admin_command_store_not_exists: "&cМагазину не існує!"
+admin_command_invalid_spawner_type: "&cСпавнер повинен бути бронзовий, залізний, золотий,\
+  \ або за індивідуальною конфігурацією!"
+admin_command_invalid_spawner_level: "&fНеправильний номер рівня, за замовчуванням\
+  \ використовувався рівень 1."
+admin_command_invalid_color: "&cЦей колір недійсний!"
+admin_command_block_is_not_bed: "&cЦільовий блок - це не ліжко!"
+admin_command_max_players_fail: "&cМаксимальна кількість гравців повинна бути >= 1!"
+admin_command_need_min_2_teems: "&cДля гри потрібно 2 і більше команд!"
+admin_command_spawners_needed: "&cУ грі повинен бути >= 1 ресурсних спавнерів!"
+admin_command_team_is_not_exists: "&cТакої команди не існує!"
+admin_command_team_is_already_exists: "&cЦя команда вже є!"
+admin_command_bed_setted: "&aЛіжко команди &7%team%&a успішно встановлено в позицію\
+  \ XYZ: &7%x%/%y%/%z%"
+admin_command_team_spawn_setted: "&aСпавн команди &7%team%&a успішно встановлено в\
+  \ позицію XYZ: &7%x%/%y%/%z% &aYAW: &7%yaw% &aPITCH: &7%pitch%"
+admin_command_team_maxplayers_setted: "&aМаксимальну кількість гравців у команді &7%team%&a\
+  \ успішно встановлено до &7%maxplayers%"
+admin_command_team_color_setted: "&aКолір команди &7%team%&a було успішно встановлено\
+  \ як %teamcolor%"
+admin_command_team_removed: "&aКоманду &7%team%&a успішно видалено!"
+admin_command_team_created: "&aКоманду &7%team%&a було успішно створено з кольором\
+  \ %teamcolor%&a і максимальною кількістю гравців: &7%maxplayers%"
+admin_command_spawners_reseted: "&aВидалено всі ресурсні спавнери для гри &7%arena%&a!"
+admin_command_spawner_added: "&aСпавнер &7%resource%&a успішно додано до позиції XYZ:\
+  \ &7%x%/%y%/%z%"
+admin_command_store_added: "&aНа вашу позицію додано селянина: &7%x%/%y%/%z% &aYAW:\
+  \ &7%yaw% &aPITCH: &7%pitch%"
+admin_command_store_removed: "&aСелянина з позиції XYZ: &7%x%/%y%/%z%&a успішно вилучено!"
+admin_command_lobby_spawn_setted: "&aЛоббі успішно встановлений в позицію XYZ: &7%x%/%y%/%z%\
+  \ &aYAW: &7%yaw% &aPITCH: &7%pitch%."
+admin_command_spec_spawn_setted: "&aСпавн для глядачів було успішно встановлено в\
+  \ позиції XYZ: &7%x%/%y%/%z% &aYAW: &7%yaw% &aPITCH: &7%pitch%"
+admin_command_pos1_setted: "&aПозиція 1 арени &7%arena%&a була встановлена на XYZ:\
+  \ &7%x%/%y%/%z%"
+admin_command_pos2_setted: "&aПозиція 2 арени &7%arena%&a була встановлена на XYZ:\
+  \ &7%x%/%y%/%z%"
+admin_command_pausecontdown_setted: "&aВідлік часу в лобі було встановлено на &7%countdown%"
+admin_command_gametime_setted: "&aМаксимальний час гри було встановлено на &7%time%."
+admin_command_set_pos1_pos2_before_save: "&cПеред збереженням гри, будь ласка, встановіть\
+  \ координати pos1 та pos2 (визначення розміру та положення арени)!"
+admin_command_set_lobby_before_save: "&cПеред збереженням гри, будь ласка, встановіть\
+  \ спавн лоббі!"
+admin_command_set_spec_before_save: "&cПеред збереженням гри, будь ласка, встановіть\
+  \ спавн для спостерігачів!"
+admin_command_set_stores_before_save: "&cПеред збереженням гри додайте, будь ласка,\
+  \ хоча б 1 магазин!"
+admin_command_set_spawners_before_save: "&cПеред збереженням гри, будь ласка, додайте\
+  \ хоча б 1 спавнер ресурсів!"
+admin_command_set_bed_for_team_before_save: "&cПеред збереженням гри, будь ласка,\
+  \ встановіть ліжко команди &7%team%&c!"
+admin_command_set_spawn_for_team_before_save: "&cПеред збереженням гри, будь ласка,\
+  \ встановіть спавн команди &7%team%&c!"
+admin_command_click_right_on_entity_to_set_join: "Тепер клацніть правою кнопкою миші\
+  \ на потрібному об'єкті, для якого ви хочете налаштувати приєднання до команди:\
+  \ &7%team%."
+admin_command_jointeam_entitynotcompatible: "&cІстота, яку ви намагаєтеся використати,\
+  \ несумісна! Можна використовувати тільки живих істот або стійки для броні!"
+admin_command_jointeam_entity_added: "&aІстоту для приєднання докоманди додано!"
+admin_command_invalid_min_players: "&cМінімум гравців має бути 2 або більше!"
+admin_command_min_players_set: "&aУспішно встановлено мінімум гравців на &7%min%&a!"
+admin_command_invalid_config_value: "&cНеправильне значення! Це може бути лише &7true&c,\
+  \ &7false&c або &7inherit&c!"
+admin_command_invalid_config_variable_name: "&cНеправильне ім'я константи!"
+admin_command_config_variable_set_to: "&aКонстанта &7%config%&a успішно встановлена\
+  \ як &7%value%&a!"
+admin_command_invalid_arena_time: "&cНеправильний тип часу арени!"
+admin_command_arena_time_set: "&aЧас на арені встановлено на &7%time%&a!"
+admin_command_invalid_arena_weather: "&cНеправильний тип аренової погоди!"
+admin_command_arena_weather_set: "&aАренову погоду було встановлено як &7%weather%&a!"
+admin_command_invalid_bar_color: "&cНеправильний колір для Boss Bar!"
+admin_command_bar_color_set: "&aВстановлено колір &7%color%&a для Boss Bar &7%type%&a!"
+admin_command_wrong_living_entity_type: "&cНеправильний тип живої істоти!"
+admin_command_store_living_entity_type_set: "&aТип живої істоти для магазину встановлено\
+  \ як &7%type%&a!"
+admin_command_upgrades: "&aПокращення встановлено до &7%bool%&a!"
+safe_reload: "&aЧекаю безпечної зупинки всіх ігор або 60 секунд до перезавантаження!"
+safe_reload_failed_to_stop_game: "&cДеякі ігри не було завершено вчасно, тому їх арена\
+  \ могла бути пошкоджена!"
+holo_not_enabled: "&cГолограми вимкнено. Чи встановлені у вас Holographic Displays\
+  \ ?"
+holo_added: "&aГолограму додано до вашої позиції!"
+click_to_holo_for_remove: "&eТепер натисніть на голограму, яку хочете видалити!"
+holo_removed: "&aГолограму успішно видалено!"
+sign_successfully_created: "&aТабличку успішно створено!"
+sign_can_not_been_created: "&cНе вдалося створити табличку! Будь ласка, перевірте\
+  \ назву арени!"
+sign_can_not_been_destroyed: "&cВи не маєте прав на знищення цього знаку!"
+sign_game_not_exists: "&cГри, яка написана на табличці, не існує! Будь ласка, зверніться\
+  \ до адміністратора!"
+sign_status_disabled: "&cГра"
+sign_status_disabled_players: "&cdisabled"
+sign_status_rebuilding: "&6Відновлення"
+sign_status_rebuilding_players: "&6Арена"
+sign_status_running: "&aПрацює"
+sign_status_running_players: "&c%players%&8/&c%maxplayers%"
+sign_status_waiting: "&6Очікування"
+sign_status_waiting_players: "&a%players%&8/&a%maxplayers%"
+list_header: "&aДоступні арени:"
+team_chest: "&a&lКомандна скриня"
+team_chest_is_not_your: "&eЦя командна скриня не ваша!"
+team_chest_placed: "&aРозміщено нову командну скриню!"
+team_chest_broken: "&cВашу командну скриню зламано!"
+trap_built: "&aВи збудували пастку! Тепер чекайте, поки хтось у неї потрапить!"
+player_self_killed: "&cГравець %victim% &cпомер!"
+player_killed: "&cГравець %killer% &cвбив %victim%&c!"
+arena_info_header: "&aДетальна інформація про арену:"
+arena_info_name: "&7Name: &r%name%"
+arena_info_status: "&7Status: &r%status%"
+arena_info_status_disabled: "&cВИМКНЕНО"
+arena_info_status_waiting: "&eОЧІКУВАННЯ ГРАВЦІВ"
+arena_info_status_running: "&aГРА ЙДЕ"
+arena_info_status_rebuilding: "&eВІДНОВЛЕННЯ"
+arena_info_status_disabled_in_edit: "&cВИМКНЕНО&r (&eВ РЕЖИМІ РЕДАГУВАННЯ&r)"
+arena_info_world: "&7World: &r%world%"
+arena_info_pos1: "&7Позиція 1: &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_pos2: "&7Позиція 2: &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_spec: "&7Позиція спостерігачів: &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_lobby: "&7Позиція лоббі: &fСвіт: &7%world% &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_teams: "&7Teams:"
+arena_info_team: "- %team%&r (Максимальна кількість гравців: &7%maxplayers%&r)"
+arena_info_team_spawn: "  &7Спавн команди: &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_team_target: "  &7Ліжко: &fXYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_spawners: "&7Ресурсні спавнери:"
+arena_info_spawner: "- %resource% &7- %team% &7- &eHolo: &f%holo% &7- XYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_min_players: "&7Мінімальна кількість гравців: &r%minplayers%"
+arena_info_villagers: "&7Магазини:"
+arena_info_villager_pos: "- XYZ: &7%x%&r/&7%y%&r/&7%z%"
+arena_info_villager_entity_type: "  Type: &a%type%"
+arena_info_villager_shop: "  Має власний магазин: &7%bool%"
+arena_info_villager_shop_name: "  Назва магазину: &6%file%&r (успадковується від main:\
+  \ &7%bool%&r)"
+arena_info_villager_shop_dealer_name: "  Ім'я продавця над головою: &6%name%&r"
+arena_info_villager_shop_dealer_has_no_name: "&cІм'я не встановлено"
+arena_info_lobby_countdown: "&7Зворотний відлік часу до початку гри: &f%time% s"
+arena_info_game_time: "&7Тривалість гри: &f%time% сек"
+arena_info_config: "&7Конфігурація констант:"
+arena_info_config_constant: "- &7%constant%&r: &7%value%"
+arena_info_config_true: "&aТак"
+arena_info_config_false: "&cНі"
+arena_info_config_inherit: "&eУспадковано від конфігурації плагіна"
+please_select_info_type: "&aБудь ласка, оберіть інформаційний розділ арени &7%arena%&a:"
+please_select_info_type_base: "&aБазова інформація&f - &7/bw admin %arena% info base"
+please_select_info_type_stores: "&aСписок магазинів&f - &7/bw admin %arena% info stores"
+please_select_info_type_spawners: "&aСписок ресурсних спавнерів&f - &7/bw admin %arena%\
+  \ info spawners"
+please_select_info_type_teams: "&aСписок команд&f - &7/bw admin %arena% info teams"
+please_select_info_type_config: "&aКонфігурація&f - &7/bw admin %arena% info config"
+please_select_info_type_click: "&bКлацніть для виконання цієї команди!"
+statistics_is_disabled: "&cНа цьому сервері відключена статистика гравців!"
+statistics_player_is_not_exists: "&cГравець не знайдений!"
+statistics_not_found: "&cСтатистики для цього гравця не знайдено!"
+statistics_header: "&aСтатистичні дані &7%player%&a:"
+statistics_kills: "&7Вбивств: &a%kills%"
+statistics_deaths: "&7Смертей: &e%deaths%"
+statistics_kd: "&7K/D: &a%kd%"
+statistics_wins: "&7Перемог: &a%wins%"
+statistics_loses: "&7Поразок: &c%loses%"
+statistics_games: "&7Зіграно ігор: &b%games%"
+statistics_beds: "&7Знищено ліжок: &a%beds%"
+statistics_score: "&7Total score: &a%score%"
+specials_trap_caught: "&cВи потрапили в пастку команди &f%team%&c!"
+specials_trap_caught_team: "&f%player%&c потрапив у пастку своєї команди!"
+specials_warp_powder_multiuse: "&cЩе один WarpPowder вже активовано!"
+specials_warp_powder_canceled: "&cWarpPowder скасовано!"
+specials_warp_powder_started: "&aЗапущено WarpPowder! Будь ласка, не рухайтеся протягом\
+  \ &7%time%&a секунд!"
+specials_tracker_no_target_found: "&cЦіль не знайдено!"
+specials_tracker_target_found: "&f%target% &ahas знайдено на відстані &f%distance%\
+  \ &aблоків!"
+specials_rescue_platform_not_in_air: "&cДля його використання потрібно перебувати\
+  \ в повітрі."
+specials_rescue_platform_destroy: "&cПлатформа буде зруйнована через &f%time% &cсекунд."
+specials_rescue_platform_created_unbreakable: "&aНезламна Платформа створена!"
+specials_rescue_platform_created: "&aПлатформа створена і буде зруйнована за &f%time%\
+  \ &aсекунди."
+specials_protection_wall_not_usable_here: "&cТут більше немає місця для Захисної Стіни"
+specials_protection_wall_destroy: "&cЗахисна стіна буде зруйнована за &f%time% &cсекунд."
+specials_protection_wall_created_unbreakable: "&aНезламну Захисну Стіну створено!"
+specials_protection_wall_created: "&aЗахисна стіна створена і буде зруйнована за &f%time%\
+  \ &aсекунд."
+specials_tntsheep_no_target_found: "&cЦіль не знайдено!"
+specials_arrow_blocker_started: "&aЗахист від стріл був активований на %time% секунд!"
+specials_arrow_blocker_already_activated: "&cБроню від стріл вже активовано!"
+specials_arrow_blocker_ended: "&cБроня від стріл вже не активна!"
+specials_golem_created: "&aГолем створений."
+special_item_delay: "&cПеред повторним використанням цього елемента необхідно почекати\
+  \ %time% секунд!"
+page_back: "Попередня сторінка"
+page_forward: "Наступна сторінка"
+protect_your_bed: "%teamcolor%&lЗахистіть своє ліжко!"
+protect_your_target: "%teamcolor%&lЗахистіть ваш цільовий блок!"
+protect_your_anchor: "%teamcolor%&lЗахищайте свій якір!"
+protect_your_cake: "%teamcolor%&lЗахистіть свій торт!"
+protect_your_bed_destroyed: "&7&lЛіжко зруйноване."
+protect_your_target_destroyed: "&7&lЦільовий блок знищено."
+protect_your_anchor_destroyed: "&7&lЯкір відродження зруйновано."
+protect_your_cake_destroyed: "&7&lТорт з'їли."
+destroy_this_bed: "%teamcolor%&lЗнищіть це ліжко!"
+destroy_this_target: "%teamcolor%&lЗнищіть цей цільовий блок!"
+destroy_this_anchor: "%teamcolor%&lЗнищіть цей якір відродження!"
+destroy_this_cake: "%teamcolor%&lЗ'їжте цей торт!"
+help_title: "BedWars %version% - Help"
+help_title_console: "BedWars %version% - Help for Console"
+help_bw_join: "/bw join <arena> - &aПриєднатись до гри"
+help_bw_leave: "/bw leave - &aПокинути гру"
+help_bw_rejoin: "/bw rejoin - &aПовторно приєднатись до останньої гри"
+help_bw_autojoin: "/bw autojoin - &aПриєднуйтесь до першої гри з очікуванням"
+help_bw_list: "/bw list - &aПерелік активних ігор"
+help_bw_leaderboard: "/bw leaderboard - &aПоказати кращих гравців цього сервера"
+help_bw_stats: "/bw stats - &aПоказати твою статистику"
+help_bw_stats_other: "/bw stats [player] - &aПоказати статистику інших гравців"
+help_bw_reload: "/bw reload - &cПерезапустити плагін"
+help_bw_addholo: "/bw addholo [leaderboard|stats]- &eДодати голограму в вашу позицію"
+help_bw_removeholo: "/bw removeholo - &eПісля виконання цієї команди гравець може\
+  \ натиснути правою кнопкою миші на статистичну голограму , щоб видалити її."
+help_bw_mainlobby: "/bw mainlobby [enable|set] - &eВмикає головне лоббі або встановлює\
+  \ розташування головного лоббі"
+help_bw_admin_info: "/bw admin <arena> info [section] - &eПоказує всю інформацію про\
+  \ арену"
+help_bw_admin_add: "/bw admin <arena> add - &eСтворити нову арену"
+help_bw_admin_lobby: "/bw admin <arena> lobby - &eВстановлює позицію лобі на вашу\
+  \ позицію"
+help_bw_admin_spec: "/bw admin <arena> spec - &eВстановлює спавн спостерігачів на\
+  \ вашу позицію"
+help_bw_admin_pos1: "/bw admin <arena> pos1 - &eВстановлює крайню точку арени на вашу\
+  \ позицію"
+help_bw_admin_pos2: "/bw admin <arena> pos2 - &eВстановлює другу крайню точку арени\
+  \ на вашу позицію"
+help_bw_admin_pausecountdown: "/bw admin <arena> pausecountdown <seconds> - &eЗадає\
+  \ тривалість паузи перед початком гри"
+help_bw_admin_minplayers: "/bw admin <arena> minplayers <minimum> - &eВстановлює мінімальну\
+  \ кількість гравців, необхідну для початку гри"
+help_bw_admin_time: "/bw admin <arena> time <seconds> - &eВстановлює тривалість гри"
+help_bw_admin_team_add: "/bw admin <arena> team add <team> <color> <max players> -\
+  \ &eДодайте команду до гри"
+help_bw_admin_team_color: "/bw admin <arena> team color <team> <color> - &eЗмінити\
+  \ колір команди"
+help_bw_admin_team_maxplayers: "/bw admin <arena> team maxplayers <team> <max players>\
+  \ - &eЗмінити максимальну кількість гравців команди"
+help_bw_admin_team_spawn: "/bw admin <arena> team spawn <team> - &eВстановлює спавн\
+  \ команди на вашу позицію"
+help_bw_admin_team_bed: "/bw admin <arena> team bed <team> [looking_at|standing_on]\
+  \ - &eВстановлює цільовий блок команди на вашу цільову позицію (це може бути інший\
+  \ блок, а не тільки ліжко)"
+help_bw_admin_jointeam: "/bw admin <arena> jointeam <team> - &eВстановлює можливість\
+  \ підключення до команди за допомогою сутності"
+help_bw_admin_spawner_add: "/bw admin <arena> spawner add <bronze|gold|iron> [hologram]\
+  \ [first level] [name] [team] [max spawned resources] - &eДодайте ресурсний спавнер\
+  \ на свою позицію"
+help_bw_admin_spawner_reset: "/bw admin <arena> spawner reset - &eВидалити всі ресурсні\
+  \ спавнери"
+help_bw_admin_store_add: "/bw admin <arena> store add [name above dealer head] [file\
+  \ with shop] [use main shop] - &eДодати селянина для торговлі на свою позицію"
+help_bw_admin_store_remove: "/bw admin <arena> store remove - &eВидалити селянина\
+  \ для торгівлі з вашого розташування"
+help_bw_admin_store_type: "/bw admin <arena> store type <living entity> - &eЗадає\
+  \ тип істоти для торгівлі (Селянин, Кінь, Корова, Свиня і т.д.)"
+help_bw_admin_config: "/bw admin <arena> config <constant> <value> - &eВстановлює\
+  \ значення константної змінної для гри"
+help_bw_admin_arena_time: "/bw admin <arena> arenatime <type> - &eВстановлює час на\
+  \ арені (DAY, NIGHT, etc.)"
+help_bw_admin_arena_weather: "/bw admin <arena> arenaweather <type> - &eВстановлює\
+  \ погоду на арені (default, CLEAN, DOWNFALL)"
+help_bw_admin_post_game_waiting: "/bw admin <arena> postgamewaiting <seconds> - &eЗадає\
+  \ час очікування перед телепортуванням гравця за межі арени"
+help_bw_admin_customprefix: "/bw admin <arena> customprefix <name|off> - &eДозволяє\
+  \ користувацький префікс для арени"
+help_bw_admin_remove: "/bw admin <arena> remove - &cВидалити арену"
+help_bw_admin_edit: "/bw admin <arena> edit - &eВимикає гру і переводить арену в режим\
+  \ редагування"
+help_bw_admin_save: "/bw admin <arena> save - &aЗберігає гру і активує її!"
+update_checker_zero: "§aНова версія %version% BedWars тепер доступна!"
+update_checker_zero_second: "Завантажте його за посиланням: %url%"
+update_checker_one: "§bSBedWars та SBedWars+ офіційно вийшли! Більше інформації: %url%."
+update_checker_one_second_good: "§bВаш сервер підготовлений до цього релізу! Завантажуйте\
+  \ прямо зараз!"
+update_checker_one_second_bad: "§bНа жаль, ваш сервер застарів! Вам знадобиться Minecraft\
+  \ версії не нижче 1.13 та Java не нижче 11!"
+help_bw_alljoin: "/bw alljoin [arena] - &aПриєднує всіх гравців на сервері до гри\
+  \ Bedwars"
+admin_command_removed_spawners: "&7%count% &aспавнерів було видалено з &7%x%&a/&7%y%&a/&7%z%"
+help_bw_admin_spawner_remove: "/bw admin <arena> spawner remove - &eВидаляє всі ресурсні\
+  \ спавнери на цій локації"
+arena_info_spawner_no_team: "&cНемає команди"
+help_bw_admin_store_child: "/bw admin <arena> store child - &eПозначте цього продавця\
+  \ як дитину"
+help_bw_admin_store_adult: "/bw admin <arena> store adult - &eПозначте цього продавця\
+  \ як дорослого"
+admin_command_store_child_state: "&aЗмінна isBaby для цього продавця була змінена\
+  \ на &7%value%."
+admin_command_invalid_time: "&cЧас &7%number%§c недійсний!"
+admin_command_post_game_waiting: "&aЧас очікування після гри успішно встановлено на\
+  \ &7%number%§a!"
+arena_info_postgamewaiting: "&7Час очікування після гри: &f%time% сек"
+leaderboard_no_scores: "&7There are no scores yet!"
+leaderboard_holo_added: "&aВ вашому розташуванні додано голограму лідерборду!"
+leaderboard_header: "&6Лідерборд BedWars - Найкращі гравці %number% гравців"
+leaderboard_line: "&l%order%. &7%player% - &a%score%"
+admin_command_customprefix_enabled: "&aКористувацький префікс успішно встановлено:\
+  \ &7%prefix%&a."
+admin_command_customprefix_disabled: "&aКористувацький префікс успішно відключено."
+admin_command_npc_must_have_skinname: "&cЯкщо ви використовуєте тип сутності PLAYER,\
+  \ ви повинні вказати назву скіну у форматі &7PLAYER:[власник скіну]."
+help_bw_dump: "/bw dump - &eЗробить дамп сервера і дасть вам посилання на дамп. Це\
+  \ посилання може бути корисним для підтримки"
+dump_success: "&aУспішний дамп сервера. Посилання: "
+dump_failed: "&cДамп провалено!"
+game_forced: '&aГра почнеться з порожніх команд. Знищіть їх цільові блоки, щоб перемогти!'
+team_not_in_game: '&cКоманда &7%name%&c не в грі!'
+team_bed_is_already_destroyed: '&cЛіжко команди &7%name%&c вже знищено!'
+cheat_received_target_block_destroy: '&aЛіжко команди &7%name%&a знищено!'
+help_bw_cheat_startemptygame: /bw cheat startemptygame - &cПочинає гру з однією командою
+upgrade_success: '&a%name% успішно оновив %spawner% до рівня %level%!'
+help_bw_cheat_destroybed: /bw cheat destroybed <team> - &cЗнищує ліжко конкретної
+  команди
+help_bw_cheat_destroyallbeds: /bw cheat destroyallbeds - &cЗнищує всі ліжка в грі
+help_bw_cheat_jointeam: /bw cheat jointeam [team] - &cПриєднує адміністратора до вказаної
+  команди або до поточної команди, ігноруючи її розмір (можна також використовувати
+  під час гри, але в команді має бути декілька гравців)
+cheat_received_target_blocks_destroy: '&aЛіжка всіх команд знищені!'
+"party_command_help": /bw party warp - &eВідправляє всіх гравців до вашої гри або
+  до вас
+cheat_not_waiting: '&cГра не перебуває в стані очікування!'
+upgrade_translate: покращення
+spawner_reached_maximum_level: §cСпавнер досяг максимального рівня!
+cheat_please_provide_valid_cheat_type: '&cВказаний тип чит-коду не дійсний або відсутній!'
+cheat_invalid_player: '&cВказаний гравець не бере участі у грі або є глядачем!'
+cheat_received_give: '&aГравець &7%player%&a отримав &7%amount%&a ресурсу: &7%resource%'
+cheat_received_kill: '&aГравець &7%player%&a вбитий чітом!'
+cheat_disabled: '&cНа цьому сервері відключені чіти!'
+cheat_game_not_running: '&cВи не можете чітерити в лоббі!'
+help_bw_cheat_give: /bw cheat give <resource> [amount] [player] - &cДає гравцеві вказану
+  кількість ресурсу
+help_bw_cheat_kill: /bw cheat kill [player] - &cВбиває вказаного гравця
+"party_command_invalid_arguments": '&cНевірна кількість аргументів!, введіть /bw party
+  help щоб дізнатись більше'
+"party_inform_game_join": '&aПриєднання до гри лідера вечірки'
+"party_command_not_in_party": '&cЩоб виконати цю команду, треба бути в вечірці!'
+"party_command_not_party_leader": '&cВи не є лідером цієї вечірки!'
