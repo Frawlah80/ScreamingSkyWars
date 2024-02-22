@@ -3,7 +3,7 @@ import org.apache.tools.ant.filters.*
 apply plugin: "com.github.gmazzo.buildconfig"
 
 dependencies {
-    /* PROVIDED */
+    /*  PROVIDED  */
     compileOnly 'net.milkbowl.vault:VaultAPI:1.7'
     compileOnly 'com.onarandombox.multiversecore:Multiverse-Core:4.0.0'
     compileOnly 'me.clip:placeholderapi:2.9.2'
