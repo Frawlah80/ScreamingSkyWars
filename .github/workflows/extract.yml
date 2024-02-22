@@ -1,28 +1,41 @@
-name: Extract BedWars.zip
+name: Extract Zip and Push to Repo
 
 on:
   push:
-    paths:
-      - 'BedWars.zip'
+    branches:
+      - main
 
 jobs:
-  extract_bedwars:
+  extract-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Extract BedWars.zip
-      run: |
-        unzip BedWars.zip
-        
-        
+      - name: Extract Zip
+        run: |
+          unzip BedWars.zip -d extracted_content
+          mv extracted_content/* .
+          rm -r extracted_content
+        shell: bash
 
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "SkyWars"
-        git push
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Move contents to the root
+        run: |
+          mv BedWars/* .
+          rm -r BedWars
+      - name: Commit and Push changes
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Screaming SkyWars"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
