@@ -1,0 +1,29 @@
+name: Plugin Builder
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '8'
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Upload JAR
+      uses: actions/upload-artifact@v4
+      with:
+        name: SkyWars
+        path: build/libs/SkyWars.jar
