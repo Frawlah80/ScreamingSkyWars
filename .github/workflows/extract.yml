@@ -1,0 +1,41 @@
+name: Extract Zip and Push to Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  extract-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Extract Zip
+        run: |
+          unzip BedWars-ver-0.2.x.zip -d extracted_content
+          mv extracted_content/* .
+          rm -r extracted_content
+        shell: bash
+
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Move contents to the root
+        run: |
+          mv BedWars-ver-0.2.x/* .
+          rm -r BedWars-ver-0.2.x
+      - name: Commit and Push changes
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "ඞ"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
