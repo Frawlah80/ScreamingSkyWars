@@ -33,4 +33,4 @@ jobs:
       - name: Upload the final artifact
         uses: actions/upload-artifact@v4
         with:
-          path: plugin/build/libs/BedWars*[!s].jar
+          path: plugin/build/libs/SkyWars*[!s].jar
