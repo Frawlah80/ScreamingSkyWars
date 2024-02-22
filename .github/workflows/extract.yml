@@ -26,10 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Move contents to the root
-        run: |
-          mv BedWars/* .
-          rm -r BedWars
+
       - name: Commit and Push changes
         run: |
           git config user.name "${{ github.actor }}"
