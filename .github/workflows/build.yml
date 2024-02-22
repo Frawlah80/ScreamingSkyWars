@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 
-concurrency: skywars_main
+concurrency: bedwars_main
 
 jobs:
   build:
