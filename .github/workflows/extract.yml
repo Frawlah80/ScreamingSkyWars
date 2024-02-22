@@ -16,5 +16,3 @@ jobs:
     - name: Extract BedWars.zip
       run: |
         unzip BedWars.zip
-        mv BedWars/* .
-        rm -r BedWars
