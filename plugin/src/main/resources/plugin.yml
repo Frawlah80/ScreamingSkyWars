@@ -38,8 +38,8 @@ softdepend:
   - Parties
   - ViaVersion
 commands:
-  bw:
-    description: Command of BW plugin
-    usage: "/bw [subcommand]"
+  sw:
+    description: Command of SSW plugin
+    usage: "sw [subcommand]"
     aliases:
-      - bedwars
+      - skywars
