@@ -1,21 +1,3 @@
-/*
- * Copyright (C) 2023 ScreamingSandals
- *
- * This file is part of Screaming BedWars.
- *
- * Screaming BedWars is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Screaming BedWars is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Screaming BedWars. If not, see <https://www.gnu.org/licenses/>.
- */
 
 package org.screamingsandals.bedwars;
 
@@ -434,8 +416,8 @@ public class Main extends JavaPlugin implements BedwarsAPI {
         new CheatCommand("cheatIn", true);
 
         BwCommandsExecutor cmd = new BwCommandsExecutor();
-        getCommand("bw").setExecutor(cmd);
-        getCommand("bw").setTabCompleter(cmd);
+        getCommand("sw").setExecutor(cmd);
+        getCommand("sw").setTabCompleter(cmd);
 
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         if (versionNumber >= 109) {
@@ -495,30 +477,30 @@ public class Main extends JavaPlugin implements BedwarsAPI {
             Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         }
 
-        Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "============" + ChatColor.RED + "===" + ChatColor.WHITE + "======  by ScreamingSandals <Misat11, Iamceph, Pronze>");
+        Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "============" + ChatColor.RED + "===" + ChatColor.WHITE + "======  by ScreamingSlippers <Frawlah, Lort533>");
         Bukkit.getConsoleSender()
-                .sendMessage(ChatColor.AQUA + "+ Screaming " + ChatColor.RED + "Bed" + ChatColor.WHITE + "Wars +  " + ChatColor.GOLD + "Version: " + version + " " + ChatColor.GREEN + "FREE");
+                .sendMessage(ChatColor.AQUA + "+ Screaming " + ChatColor.RED + "Sky" + ChatColor.WHITE + "Wars +  " + ChatColor.GOLD + "Version: " + version + " " + ChatColor.GREEN + "PREMIUM");
         Bukkit.getConsoleSender()
                 .sendMessage(ChatColor.AQUA + "============" + ChatColor.RED + "===" + ChatColor.WHITE + "======  " + (snapshot ? ChatColor.RED + "SNAPSHOT VERSION (" + VersionInfo.BUILD_NUMBER + ") - Use at your own risk" : ChatColor.GREEN + "STABLE VERSION"));
         if (isVault) {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "[B" + ChatColor.WHITE + "W] " + ChatColor.GOLD + "Found Vault");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "[S" + ChatColor.WHITE + "W] " + ChatColor.GOLD + "Found Vault");
         }
         if (!isSpigot) {
             Bukkit.getConsoleSender()
-                    .sendMessage(ChatColor.RED + "[B" + ChatColor.WHITE + "W] " + ChatColor.RED + "WARNING: You are not using Spigot. Some features may not work properly.");
+                    .sendMessage(ChatColor.RED + "[S" + ChatColor.WHITE + "W] " + ChatColor.RED + "WARNING: You are not using Spigot. Some features may not work properly.");
         }
 
         if (versionNumber < 108) {
             Bukkit.getConsoleSender().sendMessage(
-                    ChatColor.RED + "[B" + ChatColor.WHITE + "W] " + ChatColor.RED + "IMPORTANT WARNING: You are using version older than 1.8! This version is not officially supported, and some features may not work at all! Future versions of BedWars won't even start!");
+                    ChatColor.RED + "[S" + ChatColor.WHITE + "W] " + ChatColor.RED + "IMPORTANT WARNING: You are using version older than 1.8! This version is not officially supported, and some features may not work at all! Future versions of BedWars won't even start!");
         } else if (versionNumber == 108) {
             Bukkit.getConsoleSender().sendMessage(
-                    ChatColor.RED + "[B" + ChatColor.WHITE + "W] " + ChatColor.YELLOW + "You are using version 1.8! While this version is supported, it is a very old version and some features may not work as expected. Consider upgrading your server.");
+                    ChatColor.RED + "[S" + ChatColor.WHITE + "W] " + ChatColor.YELLOW + "You are using version 1.8!");
         }
         try {
             float javaVer = Float.parseFloat(System.getProperty("java.class.version"));
             if (javaVer < 55) {
-                getLogger().warning("Bedwars 0.3.0 will require at least Java 11. Your server is not prepared for it. Update your Java or contact your hosting. ");
+                getLogger().warning("BedWars 0.3.0 will require at least Java 11. But since it would never release, feel free to use ScreamingSkyWars!");
                 getLogger().warning("https://docs.screamingsandals.org/Other/java11.html");
             }
         } catch (Throwable t) { // What if it fails? Why it should fail I don't know :D
