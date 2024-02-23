@@ -123,67 +123,68 @@ public class GameCreator {
                     response = setTeamBed(player, args[1], player.getTargetBlock(null, 5), args.length >= 3 && args[2].equalsIgnoreCase("standing_on"));
                 }
             }
-        } else if (action.equalsIgnoreCase("spawner")) {
-            if (args.length >= 1) {
-                if (args[0].equalsIgnoreCase("add")) {
-                    if (args.length >= 3) {
-                        if (args[2].equalsIgnoreCase("true") || args[2].equalsIgnoreCase("false")) {
-                            if (args.length >= 4) {
-                                double customLevel;
-                                try {
-                                    customLevel = Double.parseDouble(args[3]);
-                                } catch (NumberFormatException e) {
-                                    player.sendMessage(i18n("admin_command_invalid_spawner_level"));
-                                    customLevel = 1.0;
-                                }
-                                if (args.length >= 5) {
-                                    if (args.length >= 6) {
-                                        org.screamingsandals.bedwars.api.Team newTeam = null;
-                                        for (Team team : game.getTeams()) {
-                                            if (team.name.equals(args[5])) {
-                                                newTeam = team;
-                                            }
-                                        }
-                                    	int maxSpawnedResources = -1;
-                                        if (newTeam == null) {
-                                        	boolean error = true;
-                                        	if (args.length == 6) { // Check if it's not higher than 6
-	                                        	try {
-	                                        		maxSpawnedResources = Integer.parseInt(args[5]);
-	                                        		error = false;
-	                                        	} catch (NumberFormatException e) {
-	                                        	}
-                                        	}
-                                        	if (error) {
-	                                            player.sendMessage(i18n("admin_command_invalid_team").replace("%team%", args[5]));
-	                                            return false;
-                                        	}
-                                        } else if (args.length >= 7) {
-                                        	maxSpawnedResources = Integer.parseInt(args[6]);
-                                        }
-                                        response = addSpawner(args[1], player.getLocation(), args[4], Boolean.parseBoolean(args[2]), customLevel, newTeam, maxSpawnedResources);
-                                    } else {
-                                        response = addSpawner(args[1], player.getLocation(), args[4], Boolean.parseBoolean(args[2]), customLevel, null, -1);
-                                    }
-                                } else {
-                                    response = addSpawner(args[1], player.getLocation(), null, Boolean.parseBoolean(args[2]), customLevel, null, -1);
-                                }
-                            } else {
-                                response = addSpawner(args[1], player.getLocation(), null, Boolean.parseBoolean(args[2]), 1, null, -1);
-                            }
-                        } else {
-                            response = null;
-                        }
-                    } else {
-                        response = addSpawner(args[1], player.getLocation(), null, true, 1, null, -1);
-                    }
-                } else if (args[0].equalsIgnoreCase("remove")) {
-                    response = removeSpawner(player.getLocation());
-                } else if (args[0].equalsIgnoreCase("reset")) {
-                    response = resetAllSpawners();
-                }
-            }
-        } else if (action.equalsIgnoreCase("store")) {
+        } /* else if (action.equalsIgnoreCase("spawner")) {
+          *  if (args.length >= 1) {
+          *      if (args[0].equalsIgnoreCase("add")) {
+          *          if (args.length >= 3) {
+          *              if (args[2].equalsIgnoreCase("true") || args[2].equalsIgnoreCase("false")) {
+          *                  if (args.length >= 4) {
+          *                      double customLevel;
+          *                      try {
+          *                          customLevel = Double.parseDouble(args[3]);
+          *                      } catch (NumberFormatException e) {
+          *                          player.sendMessage(i18n("admin_command_invalid_spawner_level"));
+          *                          customLevel = 1.0;
+          *                      }
+          *                      if (args.length >= 5) {
+          *                          if (args.length >= 6) {
+          *                              org.screamingsandals.bedwars.api.Team newTeam = null;
+          *                              for (Team team : game.getTeams()) {
+          *                                  if (team.name.equals(args[5])) {
+          *                                      newTeam = team;
+          *                                  }
+          *                              }
+          *                          	int maxSpawnedResources = -1;
+          *                              if (newTeam == null) {
+          *                              	boolean error = true;
+          *                              	if (args.length == 6) { // Check if it's not higher than 6
+	  *                                      	try {
+	  *                                      		maxSpawnedResources = Integer.parseInt(args[5]);
+	  *                                      		error = false;
+	  *                                      	} catch (NumberFormatException e) {
+	  *                                      	}
+          *                              	}
+          *                              	if (error) {
+	  *                                          player.sendMessage(i18n("admin_command_invalid_team").replace("%team%", args[5]));
+	  *                                          return false;
+          *                              	}
+          *                              } else if (args.length >= 7) {
+          *                              	maxSpawnedResources = Integer.parseInt(args[6]);
+          *                              }
+          *                              response = addSpawner(args[1], player.getLocation(), args[4], Boolean.parseBoolean(args[2]), customLevel, newTeam, maxSpawnedResources);
+          *                          } else {
+          *                              response = addSpawner(args[1], player.getLocation(), args[4], Boolean.parseBoolean(args[2]), customLevel, null, -1);
+          *                          }
+          *                      } else {
+          *                          response = addSpawner(args[1], player.getLocation(), null, Boolean.parseBoolean(args[2]), customLevel, null, -1);
+          *                      }
+          *                  } else {
+          *                      response = addSpawner(args[1], player.getLocation(), null, Boolean.parseBoolean(args[2]), 1, null, -1);
+          *                  }
+          *              } else {
+          *                  response = null;
+          *              }
+          *          } else {
+          *              response = addSpawner(args[1], player.getLocation(), null, true, 1, null, -1);
+          *          }
+          *      } else if (args[0].equalsIgnoreCase("remove")) {
+          *          response = removeSpawner(player.getLocation());
+          *      } else if (args[0].equalsIgnoreCase("reset")) {
+          *          response = resetAllSpawners();
+          *      }
+          *  }
+        } */
+	else if (action.equalsIgnoreCase("store")) {
             if (args.length >= 1) {
                 if (args[0].equalsIgnoreCase("add")) {
                     if (args.length >= 2) {
@@ -254,10 +255,11 @@ public class GameCreator {
                     response = i18n("admin_command_set_lobby_before_save");
                 } else if (game.getSpecSpawn() == null) {
                     response = i18n("admin_command_set_spec_before_save");
-                } else if (game.getGameStoreList().isEmpty()) {
-                    response = i18n("admin_command_set_stores_before_save");
-                } else if (game.getSpawners().isEmpty()) {
-                    response = i18n("admin_command_set_spawners_before_save");
+                }// else if (game.getGameStoreList().isEmpty()) {
+                 //   response = i18n("admin_command_set_stores_before_save");
+                 //} 
+	         // else if (game.getSpawners().isEmpty()) {
+                 //   response = i18n("admin_command_set_spawners_before_save");
                 } else {
                     game.saveToConfig();
                     game.start();
