@@ -18,7 +18,7 @@
 #
 
 main: org.screamingsandals.bedwars.Main
-name: BedWars
+name: ScreamingSkyWars
 version: "@version@"
 authors:
   - "ScreamingSlippers <Frawlah, Lort533>"
