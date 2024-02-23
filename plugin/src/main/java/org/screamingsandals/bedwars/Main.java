@@ -435,8 +435,8 @@ public class Main extends JavaPlugin implements BedwarsAPI {
         new CheatCommand("cheatIn", true);
 
         BwCommandsExecutor cmd = new BwCommandsExecutor();
-        getCommand("bw").setExecutor(cmd);
-        getCommand("bw").setTabCompleter(cmd);
+        getCommand("sw").setExecutor(cmd);
+        getCommand("sw").setTabCompleter(cmd);
 
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         if (versionNumber >= 109) {
