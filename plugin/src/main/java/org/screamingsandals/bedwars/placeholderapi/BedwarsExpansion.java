@@ -38,7 +38,7 @@ public class BedwarsExpansion extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier() {
-        return "bedwars";
+        return "skywars";
     }
 
     @Override
@@ -78,13 +78,13 @@ public class BedwarsExpansion extends PlaceholderExpansion {
                         return game.getWorld().getName();
                     case "state":
                         return game.getStatus().name().toLowerCase();
-                    case "aviable_teams": // Wow, you found an easter egg
+                    // case "aviable_teams": // Wow, you found an easter egg
                     case "available_teams":
                         return Integer.toString(game.countAvailableTeams());
                     case "connected_teams":
                         return Integer.toString(game.countRunningTeams());
-                    case "teamchests":
-                        return Integer.toString(game.countTeamChests());
+                   // case "teamchests":
+                   //     return Integer.toString(game.countTeamChests());
                 }
             }
         }
@@ -113,8 +113,8 @@ public class BedwarsExpansion extends PlaceholderExpansion {
             switch (operation) {
                 case "deaths":
                     return Integer.toString(stats.getDeaths());
-                case "destroyed_beds":
-                    return Integer.toString(stats.getDestroyedBeds());
+             //   case "destroyed_beds":
+             //       return Integer.toString(stats.getDestroyedBeds());
                 case "kills":
                     return Integer.toString(stats.getKills());
                 case "loses":
@@ -170,7 +170,7 @@ public class BedwarsExpansion extends PlaceholderExpansion {
                     } else {
                         return "none";
                     }
-                case "aviable_teams": // Wow, you found an easter egg
+               // case "aviable_teams": // Wow, you found an easter egg
                 case "available_teams":
                     if (Main.isPlayerInGame(player)) {
                         return Integer.toString(Main.getPlayerGameProfile(player).getGame().countAvailableTeams());
@@ -183,12 +183,12 @@ public class BedwarsExpansion extends PlaceholderExpansion {
                     } else {
                         return "0";
                     }
-                case "teamchests":
-                    if (Main.isPlayerInGame(player)) {
-                        return Integer.toString(Main.getPlayerGameProfile(player).getGame().countTeamChests());
-                    } else {
-                        return "0";
-                    }
+               // case "teamchests":
+               //     if (Main.isPlayerInGame(player)) {
+               //         return Integer.toString(Main.getPlayerGameProfile(player).getGame().countTeamChests());
+               //     } else {
+               //         return "0";
+               //     }
                 case "team":
                     if (Main.isPlayerInGame(player)) {
                         GamePlayer gPlayer = Main.getPlayerGameProfile(player);
@@ -258,32 +258,33 @@ public class BedwarsExpansion extends PlaceholderExpansion {
                     } else {
                         return "0";
                     }
-                case "team_bed":
-                    if (Main.isPlayerInGame(player)) {
-                        GamePlayer gPlayer = Main.getPlayerGameProfile(player);
-                        Game game = gPlayer.getGame();
-                        CurrentTeam team = game.getPlayerTeam(gPlayer);
-                        if (team != null) {
-                            return team.isBed ? "yes" : "no";
-                        } else {
-                            return "no";
-                        }
-                    } else {
-                        return "no";
-                    }
-                case "team_teamchests":
-                    if (Main.isPlayerInGame(player)) {
-                        GamePlayer gPlayer = Main.getPlayerGameProfile(player);
-                        Game game = gPlayer.getGame();
-                        CurrentTeam team = game.getPlayerTeam(gPlayer);
-                        if (team != null) {
-                            return Integer.toString(team.countTeamChests());
-                        } else {
-                            return "0";
-                        }
-                    } else {
-                        return "0";
-                    }
+             //   case "team_bed":
+             //       if (Main.isPlayerInGame(player)) {
+             //           GamePlayer gPlayer = Main.getPlayerGameProfile(player);
+             //           Game game = gPlayer.getGame();
+             //           CurrentTeam team = game.getPlayerTeam(gPlayer);
+             //           if (team != null) {
+             //               return team.isBed ? "yes" : "no";
+             //           } else {
+             //               return "no";
+             //           }
+             //       } else {
+             //           return "no";
+             //       }
+             //   case "team_teamchests":
+             //       if (Main.isPlayerInGame(player)) {
+             //           GamePlayer gPlayer = Main.getPlayerGameProfile(player);
+             //           Game game = gPlayer.getGame();
+             //           CurrentTeam team = game.getPlayerTeam(gPlayer);
+             //           if (team != null) {
+             //               return Integer.toString(team.countTeamChests());
+             //           } else {
+             //               return "0";
+             //           }
+             //       } 
+             //          else {
+             //          return "0";
+             //       }
             }
         }
 
@@ -303,8 +304,8 @@ public class BedwarsExpansion extends PlaceholderExpansion {
             switch (identifier.toLowerCase().substring(6)) {
                 case "deaths":
                     return Integer.toString(stats.getDeaths());
-                case "destroyed_beds":
-                    return Integer.toString(stats.getDestroyedBeds());
+              //  case "destroyed_beds":
+              //      return Integer.toString(stats.getDestroyedBeds());
                 case "kills":
                     return Integer.toString(stats.getKills());
                 case "loses":
