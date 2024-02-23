@@ -1,22 +1,3 @@
-/*
- * Copyright (C) 2023 ScreamingSandals
- *
- * This file is part of Screaming BedWars.
- *
- * Screaming BedWars is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Screaming BedWars is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Screaming BedWars. If not, see <https://www.gnu.org/licenses/>.
- */
-
 package org.screamingsandals.bedwars.game;
 
 import org.bukkit.*;
@@ -183,23 +164,24 @@ public class GameCreator {
                     response = resetAllSpawners();
                 }
             }
-        } else if (action.equalsIgnoreCase("store")) {
-            if (args.length >= 1) {
-                if (args[0].equalsIgnoreCase("add")) {
-                    if (args.length >= 2) {
-                        if (args.length >= 3) {
-                            if (args.length >= 4) {
-                                response = addStore(player.getLocation(), args[2], Boolean.parseBoolean(args[3]), args[1]);
-                            } else {
-                                response = addStore(player.getLocation(), args[2], true, args[1]);
-                            }
-                        } else {
-                            response = addStore(player.getLocation(), null, true, args[1]);
-                        }
-                    } else {
-                        response = addStore(player.getLocation(), null, true, null);
-                    }
-                } else if (args[0].equalsIgnoreCase("remove")) {
+        } /* else if (action.equalsIgnoreCase("store")) {
+          *  if (args.length >= 1) {
+          *      if (args[0].equalsIgnoreCase("add")) {
+          *          if (args.length >= 2) {
+          *              if (args.length >= 3) {
+          *                  if (args.length >= 4) {
+          *                      response = addStore(player.getLocation(), args[2], Boolean.parseBoolean(args[3]), args[1]);
+          *                  } else {
+          *                      response = addStore(player.getLocation(), args[2], true, args[1]);
+          *                  }
+          *             } else {
+          *                  response = addStore(player.getLocation(), null, true, args[1]);
+          *              }
+          *          } else {
+          *              response = addStore(player.getLocation(), null, true, null);
+          *          }
+          *      } 
+	  */      else if (args[0].equalsIgnoreCase("remove")) {
                     response = removeStore(player.getLocation());
                 } else if (args[0].equalsIgnoreCase("child")) {
                     response = setStoreAge(player.getLocation(), true);
