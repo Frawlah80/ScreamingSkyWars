@@ -21,7 +21,7 @@ main: org.screamingsandals.bedwars.Main
 name: BedWars
 version: "@version@"
 authors:
-  - "ScreamingSandals <Misat11, Iamceph, Pronze>"
+  - "ScreamingSlippers <Frawlah, Lort533>"
 api-version: 1.13
 load: POSTWORLD
 softdepend:
@@ -38,8 +38,10 @@ softdepend:
   - Parties
   - ViaVersion
 commands:
-  bw:
+  sw:
     description: Command of BW plugin
-    usage: "/bw [subcommand]"
+    usage: "/sw [subcommand]"
     aliases:
-      - bedwars
+      - skywars
+      - screamingskywars
+      - ssw
