@@ -235,9 +235,10 @@ public class GameCreator {
             boolean isTeamsSetCorrectly = true;
             for (Team team : game.getTeams()) {
                 if (team.bed == null) {
-                    response = i18n("admin_command_set_bed_for_team_before_save").replace("%team%", team.name);
-                    isTeamsSetCorrectly = false;
-                    break;
+		   Bukkit.getLogger().info("Bed was not set and that was accepted"); 	
+                   // response = i18n("admin_command_set_bed_for_team_before_save").replace("%team%", team.name);
+                   // isTeamsSetCorrectly = false;
+                   // break;
                 } else if (team.spawn == null) {
                     response = i18n("admin_command_set_spawn_for_team_before_save").replace("%team%", team.name);
                     isTeamsSetCorrectly = false;
@@ -254,10 +255,10 @@ public class GameCreator {
                     response = i18n("admin_command_set_lobby_before_save");
                 } else if (game.getSpecSpawn() == null) {
                     response = i18n("admin_command_set_spec_before_save");
-                } else if (game.getGameStoreList().isEmpty()) {
-                    response = i18n("admin_command_set_stores_before_save");
-                } else if (game.getSpawners().isEmpty()) {
-                    response = i18n("admin_command_set_spawners_before_save");
+                } // else if (game.getGameStoreList().isEmpty()) {
+                  //  response = i18n("admin_command_set_stores_before_save");
+                } // else if (game.getSpawners().isEmpty()) {
+                  //  response = i18n("admin_command_set_spawners_before_save");
                 } else {
                     game.saveToConfig();
                     game.start();
