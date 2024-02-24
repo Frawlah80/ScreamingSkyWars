@@ -1211,44 +1211,44 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 configMap.set("teams." + t.name + ".isNewColor", t.isNewColor());
                 configMap.set("teams." + t.name + ".color", t.color.name());
                 configMap.set("teams." + t.name + ".maxPlayers", t.maxPlayers);
-                configMap.set("teams." + t.name + ".bed", MiscUtils.setLocationToString(t.bed));
+              //  configMap.set("teams." + t.name + ".bed", MiscUtils.setLocationToString(t.bed));
                 configMap.set("teams." + t.name + ".spawn", MiscUtils.setLocationToString(t.spawn));
             }
         }
-        List<Map<String, Object>> nS = new ArrayList<>();
-        for (ItemSpawner spawner : spawners) {
-            Map<String, Object> spawnerMap = new HashMap<>();
-            spawnerMap.put("location", MiscUtils.setLocationToString(spawner.loc));
-            spawnerMap.put("type", spawner.type.getConfigKey());
-            spawnerMap.put("customName", spawner.customName);
-            spawnerMap.put("startLevel", spawner.startLevel);
-            spawnerMap.put("hologramEnabled", spawner.hologramEnabled);
-            if (spawner.getTeam() != null) {
-                spawnerMap.put("team", spawner.getTeam().getName());
-            } else {
-                spawnerMap.put("team", null);
-            }
-            spawnerMap.put("maxSpawnedResources", spawner.maxSpawnedResources);
-            nS.add(spawnerMap);
-        }
-        configMap.set("spawners", nS);
-        if (!gameStore.isEmpty()) {
-            List<Map<String, String>> nL = new ArrayList<>();
-            for (GameStore store : gameStore) {
-                Map<String, String> map = new HashMap<>();
-                map.put("loc", MiscUtils.setLocationToString(store.getStoreLocation()));
-                map.put("shop", store.getShopFile());
-                map.put("parent", store.getUseParent() ? "true" : "false");
-                map.put("type", store.getEntityType().name());
-                if (store.isShopCustomName()) {
-                    map.put("name", store.getShopCustomName());
-                }
-                map.put("isBaby", store.isBaby() ? "true" : "false");
-                map.put("skin", store.getSkinName());
-                nL.add(map);
-            }
-            configMap.set("stores", nL);
-        }
+       // List<Map<String, Object>> nS = new ArrayList<>();
+       // for (ItemSpawner spawner : spawners) {
+       //     Map<String, Object> spawnerMap = new HashMap<>();
+       //     spawnerMap.put("location", MiscUtils.setLocationToString(spawner.loc));
+       //     spawnerMap.put("type", spawner.type.getConfigKey());
+       //     spawnerMap.put("customName", spawner.customName);
+       //     spawnerMap.put("startLevel", spawner.startLevel);
+       //     spawnerMap.put("hologramEnabled", spawner.hologramEnabled);
+       //     if (spawner.getTeam() != null) {
+       //         spawnerMap.put("team", spawner.getTeam().getName());
+       //     } else {
+       //         spawnerMap.put("team", null);
+       //     }
+       //     spawnerMap.put("maxSpawnedResources", spawner.maxSpawnedResources);
+       //     nS.add(spawnerMap);
+       // }
+   //     configMap.set("spawners", nS);
+   //     if (!gameStore.isEmpty()) {
+   //         List<Map<String, String>> nL = new ArrayList<>();
+   //         for (GameStore store : gameStore) {
+   //             Map<String, String> map = new HashMap<>();
+   //             map.put("loc", MiscUtils.setLocationToString(store.getStoreLocation()));
+   //             map.put("shop", store.getShopFile());
+   //             map.put("parent", store.getUseParent() ? "true" : "false");
+   //             map.put("type", store.getEntityType().name());
+   //             if (store.isShopCustomName()) {
+   //                 map.put("name", store.getShopCustomName());
+   //             }
+   //             map.put("isBaby", store.isBaby() ? "true" : "false");
+   //             map.put("skin", store.getSkinName());
+   //             nL.add(map);
+   //         }
+   //         configMap.set("stores", nL);
+   //     }
 
         configMap.set("constant." + COMPASS_ENABLED, writeBooleanConstant(compassEnabled));
         configMap.set("constant." + ADD_WOOL_TO_INVENTORY_ON_JOIN, writeBooleanConstant(addWoolToInventoryOnJoin));
@@ -1266,21 +1266,21 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         configMap.set("constant." + LOBBY_SCOREBOARD, writeBooleanConstant(lobbyscoreboard));
         configMap.set("constant." + SCOREBOARD, writeBooleanConstant(ascoreboard));
         configMap.set("constant." + PREVENT_SPAWNING_MOBS, writeBooleanConstant(preventSpawningMobs));
-        configMap.set("constant." + SPAWNER_HOLOGRAMS, writeBooleanConstant(spawnerHolograms));
-        configMap.set("constant." + SPAWNER_DISABLE_MERGE, writeBooleanConstant(spawnerDisableMerge));
+       // configMap.set("constant." + SPAWNER_HOLOGRAMS, writeBooleanConstant(spawnerHolograms));
+       // configMap.set("constant." + SPAWNER_DISABLE_MERGE, writeBooleanConstant(spawnerDisableMerge));
         configMap.set("constant." + GAME_START_ITEMS, writeBooleanConstant(gameStartItems));
         configMap.set("constant." + PLAYER_RESPAWN_ITEMS, writeBooleanConstant(playerRespawnItems));
-        configMap.set("constant." + SPAWNER_HOLOGRAMS_COUNTDOWN, writeBooleanConstant(spawnerHologramsCountdown));
+       // configMap.set("constant." + SPAWNER_HOLOGRAMS_COUNTDOWN, writeBooleanConstant(spawnerHologramsCountdown));
         configMap.set("constant." + DAMAGE_WHEN_PLAYER_IS_NOT_IN_ARENA,
                 writeBooleanConstant(damageWhenPlayerIsNotInArena));
-        configMap.set("constant." + REMOVE_UNUSED_TARGET_BLOCKS, writeBooleanConstant(removeUnusedTargetBlocks));
+       // configMap.set("constant." + REMOVE_UNUSED_TARGET_BLOCKS, writeBooleanConstant(removeUnusedTargetBlocks));
         configMap.set("constant." + ALLOW_BLOCK_FALLING, writeBooleanConstant(allowBlockFalling));
-        configMap.set("constant." + HOLO_ABOVE_BED, writeBooleanConstant(holoAboveBed));
+       // configMap.set("constant." + HOLO_ABOVE_BED, writeBooleanConstant(holoAboveBed));
         configMap.set("constant." + SPECTATOR_JOIN, writeBooleanConstant(spectatorJoin));
-        configMap.set("constant." + ANCHOR_AUTO_FILL, writeBooleanConstant(anchorAutoFill));
-        configMap.set("constant." + ANCHOR_DECREASING, writeBooleanConstant(anchorDecreasing));
-        configMap.set("constant." + CAKE_TARGET_BLOCK_EATING, writeBooleanConstant(cakeTargetBlockEating));
-        configMap.set("constant." + TARGET_BLOCK_EXPLOSIONS, writeBooleanConstant(targetBlockExplosions));
+      //  configMap.set("constant." + ANCHOR_AUTO_FILL, writeBooleanConstant(anchorAutoFill));
+      //  configMap.set("constant." + ANCHOR_DECREASING, writeBooleanConstant(anchorDecreasing));
+      //  configMap.set("constant." + CAKE_TARGET_BLOCK_EATING, writeBooleanConstant(cakeTargetBlockEating));
+      //  configMap.set("constant." + TARGET_BLOCK_EXPLOSIONS, writeBooleanConstant(targetBlockExplosions));
 
         configMap.set("arenaTime", arenaTime.name());
         configMap.set("arenaWeather", arenaWeather == null ? "default" : arenaWeather.name());
