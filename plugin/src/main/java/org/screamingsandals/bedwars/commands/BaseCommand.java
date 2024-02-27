@@ -9,18 +9,18 @@ import java.util.List;
 
 public abstract class BaseCommand {
 
-    public static final List<String> ADMIN_PERMISSION = Arrays.asList("michelle12.bw.admin", "bw.admin");
-    public static final List<String> OTHER_STATS_PERMISSION =  Arrays.asList("michelle12.bw.otherstats", "bw.otherstats");
+    public static final List<String> ADMIN_PERMISSION = Arrays.asList("michelle12.sw.admin", "sw.admin");
+    public static final List<String> OTHER_STATS_PERMISSION =  Arrays.asList("michelle12.sw.otherstats", "sw.otherstats");
 
-    public static final List<String> JOIN_PERMISSION =  Arrays.asList("michelle12.bw.cmd.join", "bw.cmd.join");
-    public static final List<String> LEAVE_PERMISSION =  Arrays.asList("michelle12.bw.cmd.leave", "bw.cmd.leave");
-    public static final List<String> AUTOJOIN_PERMISSION =  Arrays.asList("michelle12.bw.cmd.autojoin", "bw.cmd.autojoin");
-    public static final List<String> LIST_PERMISSION =  Arrays.asList("michelle12.bw.cmd.list", "bw.cmd.list");
-    public static final List<String> REJOIN_PERMISSION =  Arrays.asList("michelle12.bw.cmd.rejoin", "bw.cmd.rejoin");
-    public static final List<String> STATS_PERMISSION =  Arrays.asList("michelle12.bw.cmd.stats", "bw.cmd.stats");
-    public static final List<String> LEADERBOARD_PERMISSION =  Arrays.asList("michelle12.bw.cmd.leaderboard", "bw.cmd.leaderboard");
-    public static final List<String> ALL_JOIN_PERMISSION =  Arrays.asList("michelle12.bw.admin.alljoin", "bw.admin.alljoin");
-    public static final List<String> PARTY_PERMISSION =  Arrays.asList("michelle12.bw.cmd.party", "bw.cmd.party");
+    public static final List<String> JOIN_PERMISSION =  Arrays.asList("michelle12.sw.cmd.join", "sw.cmd.join");
+    public static final List<String> LEAVE_PERMISSION =  Arrays.asList("michelle12.sw.cmd.leave", "sw.cmd.leave");
+    public static final List<String> AUTOJOIN_PERMISSION =  Arrays.asList("michelle12.sw.cmd.autojoin", "sw.cmd.autojoin");
+    public static final List<String> LIST_PERMISSION =  Arrays.asList("michelle12.sw.cmd.list", "sw.cmd.list");
+    public static final List<String> REJOIN_PERMISSION =  Arrays.asList("michelle12.sw.cmd.rejoin", "sw.cmd.rejoin");
+    public static final List<String> STATS_PERMISSION =  Arrays.asList("michelle12.sw.cmd.stats", "sw.cmd.stats");
+    public static final List<String> LEADERBOARD_PERMISSION =  Arrays.asList("michelle12.sw.cmd.leaderboard", "sw.cmd.leaderboard");
+    public static final List<String> ALL_JOIN_PERMISSION =  Arrays.asList("michelle12.sw.admin.alljoin", "sw.admin.alljoin");
+    public static final List<String> PARTY_PERMISSION =  Arrays.asList("michelle12.sw.cmd.party", "sw.cmd.party");
 
     private String name;
     private List<String> permissions;
