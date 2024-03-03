@@ -164,23 +164,24 @@ public class GameCreator {
                     response = resetAllSpawners();
                 }
             }
-        } else if (action.equalsIgnoreCase("store")) {
-            if (args.length >= 1) {
-                if (args[0].equalsIgnoreCase("add")) {
-                    if (args.length >= 2) {
-                        if (args.length >= 3) {
-                            if (args.length >= 4) {
-                                response = addStore(player.getLocation(), args[2], Boolean.parseBoolean(args[3]), args[1]);
-                            } else {
-                                response = addStore(player.getLocation(), args[2], true, args[1]);
-                            }
-                        } else {
-                            response = addStore(player.getLocation(), null, true, args[1]);
-                        }
-                    } else {
-                        response = addStore(player.getLocation(), null, true, null);
-                    }
-                } else if (args[0].equalsIgnoreCase("remove")) {
+        } /* else if (action.equalsIgnoreCase("store")) {
+          *  if (args.length >= 1) {
+          *      if (args[0].equalsIgnoreCase("add")) {
+          *          if (args.length >= 2) {
+          *              if (args.length >= 3) {
+          *                  if (args.length >= 4) {
+          *                      response = addStore(player.getLocation(), args[2], Boolean.parseBoolean(args[3]), args[1]);
+          *                  } else {
+          *                      response = addStore(player.getLocation(), args[2], true, args[1]);
+          *                  }
+          *             } else {
+          *                  response = addStore(player.getLocation(), null, true, args[1]);
+          *              }
+          *          } else {
+          *              response = addStore(player.getLocation(), null, true, null);
+          *          }
+          *      } 
+	  */      else if (args[0].equalsIgnoreCase("remove")) {
                     response = removeStore(player.getLocation());
                 } else if (args[0].equalsIgnoreCase("child")) {
                     response = setStoreAge(player.getLocation(), true);
