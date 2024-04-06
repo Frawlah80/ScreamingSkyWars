@@ -2031,31 +2031,31 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                         }
                     }
 
-                    for (CurrentTeam team : teamsInGame) {
-                        Block block = team.getTargetBlock().getBlock();
-                        if (block != null && "RESPAWN_ANCHOR".equals(block.getType().name())) { // don't break the game for older servers
-                            new BukkitRunnable() {
-                                public void run() {
-                                    RespawnAnchor anchor = (RespawnAnchor) block.getBlockData();
-                                    anchor.setCharges(0);
-                                    block.setBlockData(anchor);
-                                    if (getOriginalOrInheritedAnchorAutoFill()) {
-                                        new BukkitRunnable() {
-                                            public void run() {
-                                                anchor.setCharges(anchor.getCharges() + 1);
-                                                Sounds.playSound(team.getTargetBlock(), Main.getConfigurator().config.getString("target-block.respawn-anchor.sound.charge"), Sounds.BLOCK_RESPAWN_ANCHOR_CHARGE, 1, 1);
-                                                block.setBlockData(anchor);
-                                                if (anchor.getCharges() >= anchor.getMaximumCharges()) {
-                                                    updateScoreboard();
-                                                    this.cancel();
-                                                }
-                                            }
-                                        }.runTaskTimer(Main.getInstance(), 50L, 10L);
-                                    }
-                                }
-                            }.runTask(Main.getInstance());
-                        }
-                    }
+                    //for (CurrentTeam team : teamsInGame) {
+                    //    Block block = team.getTargetBlock().getBlock();
+                    //    if (block != null && "RESPAWN_ANCHOR".equals(block.getType().name())) { // don't break the game for older servers
+                    //        new BukkitRunnable() {
+                    //            public void run() {
+                    //                RespawnAnchor anchor = (RespawnAnchor) block.getBlockData();
+                    //                anchor.setCharges(0);
+                    //                block.setBlockData(anchor);
+                    //                if (getOriginalOrInheritedAnchorAutoFill()) {
+                    //                    new BukkitRunnable() {
+                    //                        public void run() {
+                    //                            anchor.setCharges(anchor.getCharges() + 1);
+                    //                            Sounds.playSound(team.getTargetBlock(), Main.getConfigurator().config.getString("target-block.respawn-anchor.sound.charge"), Sounds.BLOCK_RESPAWN_ANCHOR_CHARGE, 1, 1);
+                    //                            block.setBlockData(anchor);
+                    //                            if (anchor.getCharges() >= anchor.getMaximumCharges()) {
+                    //                                updateScoreboard();
+                    //                                this.cancel();
+                    //                            }
+                    //                        }
+                    //                    }.runTaskTimer(Main.getInstance(), 50L, 10L);
+                    //                }
+                    //            }
+                    //        }.runTask(Main.getInstance());
+                    //    }
+                    //}
 
                     if (getOriginalOrInheritedHoloAboveBed()) {
                         for (CurrentTeam team : teamsInGame) {
