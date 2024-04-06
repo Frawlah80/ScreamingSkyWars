@@ -600,14 +600,14 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         }
     }
 
-    private boolean isTargetBlock(Location loc) {
-        for (CurrentTeam team : teamsInGame) {
-            if (team.isBed && team.teamInfo.bed.equals(loc)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    //private boolean isTargetBlock(Location loc) {
+    //    for (CurrentTeam team : teamsInGame) {
+    //        if (team.isBed && team.teamInfo.bed.equals(loc)) {
+    //            return true;
+    //        }
+    //    }
+    //    return false;
+    //}
 
     public Region getRegion() {
         return region;
