@@ -1033,7 +1033,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     t.newColor = team.getBoolean("isNewColor", false);
                     t.color = TeamColor.valueOf(MiscUtils.convertColorToNewFormat(team.getString("color"), t));
                     t.name = teamN;
-                    t.bed = MiscUtils.readLocationFromString(game.world, team.getString("bed"));
+                    //t.bed = MiscUtils.readLocationFromString(game.world, team.getString("bed"));
                     t.maxPlayers = team.getInt("maxPlayers");
                     t.spawn = MiscUtils.readLocationFromString(game.world, team.getString("spawn"));
                     t.game = game;
