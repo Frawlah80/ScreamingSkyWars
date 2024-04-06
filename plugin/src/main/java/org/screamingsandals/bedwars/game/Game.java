@@ -489,7 +489,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 loc.subtract(0, 1, 0);
             }
         }
-        if (isTargetBlock(loc)) {
+        /*if (isTargetBlock(loc)) {
             if (region.isBedBlock(block.getState())) {
                 if (getPlayerTeam(player).teamInfo.bed.equals(loc)) {
                     return false;
@@ -549,7 +549,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 }
                 return true;
             }
-        }
+        }*/
         if (Main.isBreakableBlock(block.getType())) {
             region.putOriginalBlock(block.getLocation(), block.getState());
             return true;
@@ -569,7 +569,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 loc.subtract(0, 1, 0);
             }
         }
-        if (isTargetBlock(loc)) {
+        /*if (isTargetBlock(loc)) {
             if (region.isBedBlock(block.getState())) {
                 bedDestroyed(loc, null, true, false, false, false);
                 region.putOriginalBlock(block.getLocation(), block.getState());
@@ -597,7 +597,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 region.putOriginalBlock(loc, block.getState());
                 block.setType(Material.AIR);
             }
-        }
+        }*/
     }
 
     //private boolean isTargetBlock(Location loc) {
