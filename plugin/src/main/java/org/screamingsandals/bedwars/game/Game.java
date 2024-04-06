@@ -2558,7 +2558,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
         obj.setDisplayName(this.formatScoreboardTitle());
 
-        for (CurrentTeam team : teamsInGame) {
+        /*for (CurrentTeam team : teamsInGame) {
             String teamLine = this.formatScoreboardTeam(team, !team.isBed, team.isBed && "RESPAWN_ANCHOR".equals(team.teamInfo.bed.getBlock().getType().name()) && Player116ListenerUtils.isAnchorEmpty(team.teamInfo.bed.getBlock()));
 
             if (!this.gameScoreboard.getEntries().contains(teamLine)) {
@@ -2572,7 +2572,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             if (score.getScore() != team.players.size()) {
                 score.setScore(team.players.size());
             }
-        }
+        }*/
 
         for (GamePlayer player : players) {
             player.player.setScoreboard(gameScoreboard);
