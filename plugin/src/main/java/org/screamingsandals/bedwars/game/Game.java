@@ -2057,7 +2057,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     //    }
                     //}
 
-                    if (getOriginalOrInheritedHoloAboveBed()) {
+                    /*if (getOriginalOrInheritedHoloAboveBed()) {
                         for (CurrentTeam team : teamsInGame) {
                             Block bed = team.teamInfo.bed.getBlock();
                             Location loc = team.teamInfo.bed.clone().add(0.5, 1.5, 0.5);
@@ -2081,7 +2081,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                             createdHolograms.add(protectHolo);
                             team.setProtectHolo(protectHolo);
                         }
-                    }
+                    }*/
 
                     // Check target blocks existence
                     for (CurrentTeam team : teamsInGame) {
