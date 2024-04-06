@@ -1211,7 +1211,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                 configMap.set("teams." + t.name + ".isNewColor", t.isNewColor());
                 configMap.set("teams." + t.name + ".color", t.color.name());
                 configMap.set("teams." + t.name + ".maxPlayers", t.maxPlayers);
-                configMap.set("teams." + t.name + ".bed", MiscUtils.setLocationToString(t.bed));
+                //configMap.set("teams." + t.name + ".bed", MiscUtils.setLocationToString(t.bed));
                 configMap.set("teams." + t.name + ".spawn", MiscUtils.setLocationToString(t.spawn));
             }
         }
