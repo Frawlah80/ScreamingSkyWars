@@ -125,9 +125,9 @@ public class PlayerListener implements Listener {
                 CurrentTeam team = game.getPlayerTeam(gVictim);
                 SpawnEffects.spawnEffect(game, victim, "game-effects.kill");
                 boolean isBed = team.isBed;
-                if (isBed && game.getOriginalOrInheritedAnchorDecreasing() && "RESPAWN_ANCHOR".equals(team.teamInfo.bed.getBlock().getType().name())) {
-                    isBed = Player116ListenerUtils.processAnchorDeath(game, team, isBed);
-                }
+                //if (isBed && game.getOriginalOrInheritedAnchorDecreasing() && "RESPAWN_ANCHOR".equals(team.teamInfo.bed.getBlock().getType().name())) {
+                //    isBed = Player116ListenerUtils.processAnchorDeath(game, team, isBed);
+                //}
                 if (!isBed) {
                     gVictim.isSpectator = true;
                     team.players.remove(gVictim);
