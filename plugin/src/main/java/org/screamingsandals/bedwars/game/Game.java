@@ -2084,7 +2084,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     }*/
 
                     // Check target blocks existence
-                    for (CurrentTeam team : teamsInGame) {
+                    /*for (CurrentTeam team : teamsInGame) {
                         Location targetLocation = team.getTargetBlock();
                         if (targetLocation.getBlock().getType() == Material.AIR) {
                             ItemStack stack = team.teamInfo.color.getWool();
@@ -2098,7 +2098,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                                 }
                             }
                         }
-                    }
+                    }*/
 
                     if (Main.getVersionNumber() >= 115 && !Main.getConfigurator().config.getBoolean("allow-fake-death")) {
                         world.setGameRule(GameRule.DO_IMMEDIATE_RESPAWN, true);
