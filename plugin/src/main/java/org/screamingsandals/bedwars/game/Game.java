@@ -31,7 +31,6 @@ import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.Sign;
-import org.bukkit.block.data.type.RespawnAnchor;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.configuration.ConfigurationSection;
@@ -72,7 +71,6 @@ import org.screamingsandals.bedwars.boss.XPBar;
 import org.screamingsandals.bedwars.commands.StatsCommand;
 import org.screamingsandals.bedwars.inventories.TeamSelectorInventory;
 import org.screamingsandals.bedwars.lib.nms.utils.ClassStorage;
-import org.screamingsandals.bedwars.listener.Player116ListenerUtils;
 import org.screamingsandals.bedwars.region.FlatteningRegion;
 import org.screamingsandals.bedwars.region.LegacyRegion;
 import org.screamingsandals.bedwars.statistics.PlayerStatistic;
@@ -629,6 +627,14 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             }
         }
         return null;
+    }
+
+    public void setBedDestroyed() {
+        for (CurrentTeam team : teamsInGame) {
+            if (team.isTargetBlockExists()) {
+                team.isBed = false;
+            }
+        }
     }
 
     public void bedDestroyed(Location loc, Player broker, boolean isItBedBlock, boolean isItAnchor, boolean isItCake, boolean isItDoor) {

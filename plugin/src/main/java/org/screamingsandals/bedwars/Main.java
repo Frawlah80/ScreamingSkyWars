@@ -2,6 +2,7 @@
 package org.screamingsandals.bedwars;
 
 import org.bstats.charts.SimplePie;
+import org.screamingsandals.bedwars.game.*;
 import org.screamingsandals.bedwars.lib.lang.I18n;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
@@ -19,16 +20,11 @@ import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.screamingsandals.bedwars.api.BedwarsAPI;
 import org.screamingsandals.bedwars.api.game.GameStatus;
-import org.screamingsandals.bedwars.game.GameStore;
 import org.screamingsandals.bedwars.api.statistics.PlayerStatisticsManager;
 import org.screamingsandals.bedwars.api.utils.ColorChanger;
 import org.screamingsandals.bedwars.commands.*;
 import org.screamingsandals.bedwars.config.Configurator;
 import org.screamingsandals.bedwars.database.DatabaseManager;
-import org.screamingsandals.bedwars.game.Game;
-import org.screamingsandals.bedwars.game.GamePlayer;
-import org.screamingsandals.bedwars.game.ItemSpawnerType;
-import org.screamingsandals.bedwars.game.TeamColor;
 import org.screamingsandals.bedwars.holograms.LeaderboardHolograms;
 import org.screamingsandals.bedwars.holograms.StatisticsHolograms;
 import org.screamingsandals.bedwars.inventories.ShopInventory;
@@ -61,6 +57,7 @@ import static org.screamingsandals.bedwars.lib.lang.I18n.i18n;
 
 public class Main extends JavaPlugin implements BedwarsAPI {
     private static Main instance;
+    public static Main plugin;
     private String version;
     private boolean isDisabling = false;
     private boolean isSpigot, isLegacy;
@@ -419,6 +416,8 @@ public class Main extends JavaPlugin implements BedwarsAPI {
         getCommand("sw").setExecutor(cmd);
         getCommand("sw").setTabCompleter(cmd);
 
+        getServer().getPluginManager().registerEvents(new GameStartListener(), this);
+
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         if (versionNumber >= 109) {
             getServer().getPluginManager().registerEvents(new Player19Listener(), this);
@@ -480,8 +479,6 @@ public class Main extends JavaPlugin implements BedwarsAPI {
         Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "============" + ChatColor.RED + "===" + ChatColor.WHITE + "======  by ScreamingSlippers <Frawlah, Lort533>");
         Bukkit.getConsoleSender()
                 .sendMessage(ChatColor.AQUA + "+ Screaming " + ChatColor.RED + "Sky" + ChatColor.WHITE + "Wars +  " + ChatColor.GOLD + "Version: " + version + " " + ChatColor.GREEN + "PREMIUM");
-        Bukkit.getConsoleSender()
-                .sendMessage(ChatColor.AQUA + "============" + ChatColor.RED + "===" + ChatColor.WHITE + "======  " + (snapshot ? ChatColor.RED + "SNAPSHOT VERSION (" + VersionInfo.BUILD_NUMBER + ") - Use at your own risk" : ChatColor.GREEN + "STABLE VERSION"));
         if (isVault) {
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "[S" + ChatColor.WHITE + "W] " + ChatColor.GOLD + "Found Vault");
         }
@@ -576,7 +573,6 @@ public class Main extends JavaPlugin implements BedwarsAPI {
         final int pluginId = 7147;
         metrics = new Metrics(this, pluginId);
         metrics.addCustomChart(new SimplePie("edition", () -> "Free"));
-        metrics.addCustomChart(new SimplePie("build_number", () -> VersionInfo.BUILD_NUMBER));
 
         Bukkit.getConsoleSender().sendMessage("§fEverything is loaded! If you like our work, consider visiting our Patreon! <3");
         Bukkit.getConsoleSender().sendMessage("§fhttps://www.patreon.com/screamingsandals");

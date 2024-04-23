@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/BedWars-parent.BedWars-API.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/BedWars-parent.BedWars-API.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nms/BedWars-parent.BedWars-NMS.main.iml" filepath="$PROJECT_DIR$/.idea/modules/nms/BedWars-parent.BedWars-NMS.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/BedWars-parent.BedWars.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/BedWars-parent.BedWars.main.iml" />
+    </modules>
+  </component>
+</project>
