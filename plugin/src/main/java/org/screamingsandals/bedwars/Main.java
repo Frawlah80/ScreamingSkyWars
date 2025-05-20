@@ -470,7 +470,7 @@ public class Main extends JavaPlugin implements BedwarsAPI {
                     spread, result.getMaterial(), color, interval, result.getDamage()));
         }
 
-        menu = new ShopInventory();
+        //menu = new ShopInventory();
 
         if (getConfigurator().config.getBoolean("bungee.enabled")) {
             Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
