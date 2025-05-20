@@ -1207,7 +1207,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         configMap.set("pos1", MiscUtils.setLocationToString(pos1));
         configMap.set("pos2", MiscUtils.setLocationToString(pos2));
         configMap.set("specSpawn", MiscUtils.setLocationToString(specSpawn));
-        configMap.set("lobbySpawn", MiscUtils.setLocationToString(lobbySpawn));
+        //configMap.set("lobbySpawn", MiscUtils.setLocationToString(lobbySpawn));
         configMap.set("lobbySpawnWorld", lobbySpawn.getWorld().getName());
         configMap.set("minPlayers", minPlayers);
         configMap.set("postGameWaiting", postGameWaiting);
