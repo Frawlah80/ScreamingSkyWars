@@ -120,16 +120,16 @@ public class AdminCommand extends BaseCommand {
 
                             player.sendMessage(spec);
 
-                            Location loc_lobby = game.getLobbySpawn();
+                            /*Location loc_lobby = game.getLobbySpawn();
                             String lobby = i18n("arena_info_lobby", false)
                                     .replace("%x%", Double.toString(loc_lobby.getX()))
                                     .replace("%y%", Double.toString(loc_lobby.getY()))
                                     .replace("%z%", Double.toString(loc_lobby.getZ()))
                                     .replace("%yaw%", Float.toString(loc_lobby.getYaw()))
                                     .replace("%pitch%", Float.toString(loc_lobby.getPitch()))
-                                    .replace("%world%", loc_lobby.getWorld().getName());
+                                    .replace("%world%", loc_lobby.getWorld().getName());*/
 
-                            player.sendMessage(lobby);
+                            //player.sendMessage(lobby);
                             player.sendMessage(i18n("arena_info_min_players", false).replace("%minplayers%",
                                     Integer.toString(game.getMinPlayers())));
                             player.sendMessage(i18n("arena_info_lobby_countdown", false).replace("%time%",

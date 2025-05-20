@@ -46,9 +46,10 @@ public class GameCreator {
     public boolean cmd(Player player, String action, String[] args) {
         boolean isArenaSaved = false;
         String response = null;
-        if (action.equalsIgnoreCase("lobby")) {
-            response = setLobbySpawn(player.getLocation());
-        } else if (action.equalsIgnoreCase("spec")) {
+        //if (action.equalsIgnoreCase("lobby")) {
+        //    response = setLobbySpawn(player.getLocation());
+        //}
+        if (action.equalsIgnoreCase("spec")) {
             response = setSpecSpawn(player.getLocation());
         } else if (action.equalsIgnoreCase("pos1")) {
             response = setPos1(player.getLocation());
@@ -848,12 +849,12 @@ public class GameCreator {
                 .replace("%yaw%", Float.toString(loc.getYaw())).replace("%pitch%", Float.toString(loc.getPitch()));
     }
 
-    public String setLobbySpawn(Location loc) {
+    /*public String setLobbySpawn(Location loc) {
         game.setLobbySpawn(loc);
         return i18n("admin_command_lobby_spawn_setted").replace("%x%", Double.toString(loc.getX()))
                 .replace("%y%", Double.toString(loc.getY())).replace("%z%", Double.toString(loc.getZ()))
                 .replace("%yaw%", Float.toString(loc.getYaw())).replace("%pitch%", Float.toString(loc.getPitch()));
-    }
+    }*/
 
     public String setSpecSpawn(Location loc) {
         if (game.getPos1() == null || game.getPos2() == null) {

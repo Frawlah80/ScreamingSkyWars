@@ -338,10 +338,10 @@ public class PlayerListener implements Listener {
             Game game = gPlayer.getGame();
             CurrentTeam team = game.getPlayerTeam(gPlayer);
 
-            if (game.getStatus() == GameStatus.WAITING) {
+            /*if (game.getStatus() == GameStatus.WAITING) {
                 event.setRespawnLocation(gPlayer.getGame().getLobbySpawn());
                 return;
-            }
+            }*/
             // clear inventory to fix issue 148
             if (!game.getOriginalOrInheritedKeepInventory()) {
                 event.getPlayer().getInventory().clear();
@@ -392,10 +392,10 @@ public class PlayerListener implements Listener {
         if (Main.isPlayerInGame(event.getPlayer())) {
             GamePlayer gPlayer = Main.getPlayerGameProfile(event.getPlayer());
             Game game = gPlayer.getGame();
-            if (game.getWorld() != event.getPlayer().getWorld()
+            /*if (game.getWorld() != event.getPlayer().getWorld()
                     && game.getLobbySpawn().getWorld() != event.getPlayer().getWorld()) {
                 gPlayer.changeGame(null);
-            }
+            }*/
         }
 
         if (Main.isHologramsEnabled()) {
@@ -641,7 +641,7 @@ public class PlayerListener implements Listener {
             } else if (game.getStatus() == GameStatus.WAITING) {
                 if (event.getCause() == DamageCause.VOID) {
                     gPlayer.player.setFallDistance(0);
-                    gPlayer.teleport(game.getLobbySpawn());
+                    //gPlayer.teleport(game.getLobbySpawn());
                 }
                 event.setCancelled(true);
             } else if (game.getStatus() == GameStatus.RUNNING || game.getStatus() == GameStatus.GAME_END_CELEBRATING) {
