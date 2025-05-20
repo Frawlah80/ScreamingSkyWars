@@ -81,14 +81,14 @@ public class Configurator {
             e.printStackTrace();
         }
 
-        String shopFileName = "shop.yml";
+        /*String shopFileName = "shop.yml";
         if (config.getBoolean("turnOnExperimentalGroovyShop", false)) {
             shopFileName = "shop.groovy";
         }
         shopFile = new File(dataFolder, shopFileName);
         if (!shopFile.exists()) {
             main.saveResource(shopFileName, false);
-        }
+        }*/
 
         AtomicBoolean modify = new AtomicBoolean(false);
         checkOrSetConfig(modify, "locale", "en");

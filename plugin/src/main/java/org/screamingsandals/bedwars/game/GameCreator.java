@@ -233,8 +233,8 @@ public class GameCreator {
                     response = i18n("admin_command_need_min_2_teems");
                 } else if (game.getPos1() == null || game.getPos2() == null) {
                     response = i18n("admin_command_set_pos1_pos2_before_save");
-                } else if (game.getLobbySpawn() == null) {
-                    response = i18n("admin_command_set_lobby_before_save");
+                //} else if (game.getLobbySpawn() == null) {
+                  //  response = i18n("admin_command_set_lobby_before_save");
                 } else if (game.getSpecSpawn() == null) {
                     response = i18n("admin_command_set_spec_before_save");
                 } // else if (game.getGameStoreList().isEmpty()) {
