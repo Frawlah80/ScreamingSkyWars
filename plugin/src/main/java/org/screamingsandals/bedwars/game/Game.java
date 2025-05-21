@@ -1004,9 +1004,9 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             game.pos1 = MiscUtils.readLocationFromString(game.world, configMap.getString("pos1"));
             game.pos2 = MiscUtils.readLocationFromString(game.world, configMap.getString("pos2"));
             game.specSpawn = MiscUtils.readLocationFromString(game.world, configMap.getString("specSpawn"));
-            String spawnWorld = configMap.getString("lobbySpawnWorld");
-            World lobbySpawnWorld = Bukkit.getWorld(spawnWorld);
-            if (lobbySpawnWorld == null) {
+            //String spawnWorld = configMap.getString("lobbySpawnWorld");
+            //World lobbySpawnWorld = Bukkit.getWorld(spawnWorld);
+            /*if (lobbySpawnWorld == null) {
                 if (Bukkit.getPluginManager().isPluginEnabled("Multiverse-Core")) {
                     Bukkit.getConsoleSender().sendMessage("§c[B§fW] §cWorld " + spawnWorld
                             + " was not found, but we found Multiverse-Core, so we will try to load this world.");
@@ -1033,7 +1033,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     return null;
                 }
             }
-            game.lobbySpawn = MiscUtils.readLocationFromString(lobbySpawnWorld, configMap.getString("lobbySpawn"));
+            game.lobbySpawn = MiscUtils.readLocationFromString(lobbySpawnWorld, configMap.getString("lobbySpawn"));*/
             game.minPlayers = configMap.getInt("minPlayers", 2);
             if (configMap.isSet("teams")) {
                 for (String teamN : configMap.getConfigurationSection("teams").getKeys(false)) {
