@@ -755,13 +755,15 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     .replace("maxplayers", calculatedMaxPlayers)
                     .send(getConnectedPlayers());
 
-            gamePlayer.teleport(lobbySpawn, () -> {
+            //gamePlayer.teleport(lobbySpawn, () -> {
+            Bukkit.getScheduler().runTask(Main.getInstance(),() -> {
                 gamePlayer.invClean(); // temp fix for inventory issues?
                 SpawnEffects.spawnEffect(Game.this, gamePlayer.player, "game-effects.lobbyjoin");
 
-                if (getOriginalOrInheritedJoinRandomTeamOnJoin()) {
+                //if (getOriginalOrInheritedJoinRandomTeamOnJoin()) {
                     joinRandomTeam(gamePlayer);
-                }
+
+                //}
 
                 if (getOriginalOrInheritedCompassEnabled()) {
                     int compassPosition = Main.getConfigurator().config.getInt("hotbar.selector", 0);
@@ -796,6 +798,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
                     }
                 }
             });
+            //});
 
             if (isEmpty) {
                 runTask();
