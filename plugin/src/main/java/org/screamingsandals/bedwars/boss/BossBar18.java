@@ -69,7 +69,7 @@ public class BossBar18 implements org.screamingsandals.bedwars.api.boss.BossBar1
 
     @Override
     public void setMessage(String message) {
-        bossbarEntity.setCustomName(message);
+        //bossbarEntity.setCustomName(message);
         if (viaActive) {
             viaBossBar.setTitle(message);
         }
