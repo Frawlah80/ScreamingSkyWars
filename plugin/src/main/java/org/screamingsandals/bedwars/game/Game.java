@@ -1338,8 +1338,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             if (Main.getConfigurator().config.getBoolean("bossbar.use-xp-bar", false)) {
                 statusbar = new XPBar();
             } else {
-                //statusbar = BossBarSelector.getBossBar(lobbySpawn);
-                Bukkit.getLogger().info("Not using bossbar in lobby");
+                statusbar = BossBarSelector.getBossBar(lobbySpawn);
             }
             preparing = false;
             Bukkit.getPluginManager().callEvent(new BedwarsGameEnabledEvent(this));

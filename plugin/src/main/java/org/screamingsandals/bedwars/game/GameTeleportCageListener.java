@@ -17,7 +17,6 @@ import org.screamingsandals.bedwars.api.events.BedwarsPlayerLeaveEvent;
 import org.screamingsandals.bedwars.api.game.Game;
 import org.screamingsandals.bedwars.api.game.GameStatus;
 import org.screamingsandals.bedwars.api.Team;
-import org.screamingsandals.bedwars.utils.MiscUtils;
 
 import java.util.HashSet;
 import java.util.List;
@@ -58,6 +57,19 @@ public class GameTeleportCageListener implements Listener {
             Location teamSpawnLoc = t.getTeamSpawn();
             Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
                 buildCage(teamSpawnLoc);
+            });
+        }
+    }
+
+    @EventHandler
+    public void onGameDisable(BedwarsGameChangedStatusEvent gameDisabled) {
+        Game game = gameDisabled.getGame();
+        List<Team> teams = game.getAvailableTeams();
+        Bukkit.getLogger().info("Removing cages");
+        for (Team t : teams) {
+            Location teamSpawnLoc = t.getTeamSpawn();
+            Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
+                removeCage(teamSpawnLoc);
             });
         }
     }
