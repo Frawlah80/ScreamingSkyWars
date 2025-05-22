@@ -10,10 +10,7 @@ import org.bukkit.event.Listener;
 
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.screamingsandals.bedwars.Main;
-import org.screamingsandals.bedwars.api.events.BedwarsGameChangedStatusEvent;
-import org.screamingsandals.bedwars.api.events.BedwarsGameEnabledEvent;
-import org.screamingsandals.bedwars.api.events.BedwarsPlayerJoinedEvent;
-import org.screamingsandals.bedwars.api.events.BedwarsPlayerLeaveEvent;
+import org.screamingsandals.bedwars.api.events.*;
 import org.screamingsandals.bedwars.api.game.Game;
 import org.screamingsandals.bedwars.api.game.GameStatus;
 import org.screamingsandals.bedwars.api.Team;
@@ -52,7 +49,7 @@ public class GameTeleportCageListener implements Listener {
         Game game = gameEnable.getGame();
         List<Team> teams = game.getAvailableTeams();
 
-        Bukkit.getLogger().info("Making cages");
+        Bukkit.getLogger().info("Making cages wefkewjfbwe");
         for (Team t : teams) {
             Location teamSpawnLoc = t.getTeamSpawn();
             Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
@@ -61,25 +58,25 @@ public class GameTeleportCageListener implements Listener {
         }
     }
 
-    /*@EventHandler
-    public void onGameDisable(BedwarsGameChangedStatusEvent gameDisabled) {
+    @EventHandler
+    public void onGameDisable(BedwarsGameDisabledEvent gameDisabled) {
         Game game = gameDisabled.getGame();
         List<Team> teams = game.getAvailableTeams();
-        Bukkit.getLogger().info("Removing cages");
+        Bukkit.getLogger().info("Removing cages efkjbwekf");
         for (Team t : teams) {
             Location teamSpawnLoc = t.getTeamSpawn();
             Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
                 removeCage(teamSpawnLoc);
             });
         }
-    }*/
+    }
 
     @EventHandler
     public void onGameRebuild(BedwarsGameChangedStatusEvent reBuilding) {
         Game game = reBuilding.getGame();
         List<Team> teams = game.getAvailableTeams();
         if (game.getStatus() == GameStatus.REBUILDING) {
-            Bukkit.getLogger().info("Making cages");
+            Bukkit.getLogger().info("Making cages dpfobjdrfo");
             for (Team t : teams) {
                 Location teamSpawnLoc = t.getTeamSpawn();
                 Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
@@ -90,17 +87,15 @@ public class GameTeleportCageListener implements Listener {
     }
 
     @EventHandler
-    public void onGameStart(BedwarsGameChangedStatusEvent gameStarted) {
+    public void onGameStart(BedwarsGameStartedEvent gameStarted) {
         Game game = gameStarted.getGame();
         List<Team> teams = game.getAvailableTeams();
-        if (game.getStatus() == GameStatus.RUNNING) {
-            Bukkit.getLogger().info("Removing cages");
-            for (Team t : teams) {
-                Location teamSpawnLoc = t.getTeamSpawn();
-                Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
-                    removeCage(teamSpawnLoc);
-                });
-            }
+        Bukkit.getLogger().info("Removing cages kwkefhwui");
+        for (Team t : teams) {
+            Location teamSpawnLoc = t.getTeamSpawn();
+            Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
+                removeCage(teamSpawnLoc);
+            });
         }
     }
 
