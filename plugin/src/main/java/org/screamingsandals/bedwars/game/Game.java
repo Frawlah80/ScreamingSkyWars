@@ -978,6 +978,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             game.name = configMap.getString("name");
             game.pauseCountdown = configMap.getInt("pauseCountdown");
             game.gameTime = configMap.getInt("gameTime");
+            game.gameMode = org.screamingsandals.bedwars.api.game.GameMode.valueOf(configMap.getString("gameMode"));
 
             String worldName = configMap.getString("world");
             game.world = Bukkit.getWorld(worldName);
@@ -1219,6 +1220,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         configMap.set("name", name);
         configMap.set("pauseCountdown", pauseCountdown);
         configMap.set("gameTime", gameTime);
+        configMap.set("gameMode", gameMode);
         configMap.set("world", world.getName());
         configMap.set("pos1", MiscUtils.setLocationToString(pos1));
         configMap.set("pos2", MiscUtils.setLocationToString(pos2));
