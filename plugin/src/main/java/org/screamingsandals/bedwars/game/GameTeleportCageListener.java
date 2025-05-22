@@ -61,7 +61,7 @@ public class GameTeleportCageListener implements Listener {
         }
     }
 
-    @EventHandler
+    /*@EventHandler
     public void onGameDisable(BedwarsGameChangedStatusEvent gameDisabled) {
         Game game = gameDisabled.getGame();
         List<Team> teams = game.getAvailableTeams();
@@ -72,7 +72,7 @@ public class GameTeleportCageListener implements Listener {
                 removeCage(teamSpawnLoc);
             });
         }
-    }
+    }*/
 
     @EventHandler
     public void onGameRebuild(BedwarsGameChangedStatusEvent reBuilding) {
