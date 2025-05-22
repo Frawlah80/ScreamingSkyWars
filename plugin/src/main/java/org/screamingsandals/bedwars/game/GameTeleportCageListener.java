@@ -124,12 +124,12 @@ public class GameTeleportCageListener implements Listener {
         int centerY = loc.getBlockY();
         int centerZ = loc.getBlockZ();
 
-        for (int x = centerX - 1; x <= centerX + 1; x++) {
-            for (int y = centerY - 1; y <= centerY + 1; y++) {
-                for (int z = centerZ - 1; z <= centerZ + 1; z++) {
-                    if (x == centerX - 1 || x == centerX + 1 ||
-                            y == centerY - 1 || y == centerY + 1 ||
-                            z == centerZ - 1 || z == centerZ + 1) {
+        for (int x = centerX - 2; x <= centerX + 2; x++) {
+            for (int y = centerY - 2; y <= centerY + 2; y++) {
+                for (int z = centerZ - 2; z <= centerZ + 2; z++) {
+                    if (x == centerX - 2 || x == centerX + 2 ||
+                            y == centerY - 2 || y == centerY + 2 ||
+                            z == centerZ - 2 || z == centerZ + 2) {
                         Location blockLoc = new Location(world, x, y, z);
                         world.getBlockAt(blockLoc).setType(Material.GLASS);
                     }
@@ -144,12 +144,12 @@ public class GameTeleportCageListener implements Listener {
         int centerY = loc.getBlockY();
         int centerZ = loc.getBlockZ();
 
-        for (int x = centerX - 1; x <= centerX + 1; x++) {
-            for (int y = centerY - 1; y <= centerY + 1; y++) {
-                for (int z = centerZ - 1; z <= centerZ + 1; z++) {
-                    if (x == centerX - 1 || x == centerX + 1 ||
-                            y == centerY - 1 || y == centerY + 1 ||
-                            z == centerZ - 1 || z == centerZ + 1) {
+        for (int x = centerX - 2; x <= centerX + 2; x++) {
+            for (int y = centerY - 2; y <= centerY + 2; y++) {
+                for (int z = centerZ - 2; z <= centerZ + 2; z++) {
+                    if (x == centerX - 2 || x == centerX + 2 ||
+                            y == centerY - 2 || y == centerY + 2 ||
+                            z == centerZ - 2 || z == centerZ + 2) {
                         Location blockLoc = new Location(world, x, y, z);
                         world.getBlockAt(blockLoc).setType(Material.AIR);
                     }
