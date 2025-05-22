@@ -11,6 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.screamingsandals.bedwars.Main;
 import org.screamingsandals.bedwars.api.events.BedwarsGameChangedStatusEvent;
+import org.screamingsandals.bedwars.api.events.BedwarsGameEnabledEvent;
 import org.screamingsandals.bedwars.api.events.BedwarsPlayerJoinedEvent;
 import org.screamingsandals.bedwars.api.events.BedwarsPlayerLeaveEvent;
 import org.screamingsandals.bedwars.api.game.Game;
@@ -48,13 +49,27 @@ public class GameTeleportCageListener implements Listener {
     }
 
     @EventHandler
+    public void onGameEnable(BedwarsGameEnabledEvent gameEnable) {
+        Game game = gameEnable.getGame();
+        List<Team> teams = game.getAvailableTeams();
+
+        Bukkit.getLogger().info("Making cages");
+        for (Team t : teams) {
+            Location teamSpawnLoc = t.getTeamSpawn();
+            Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
+                buildCage(teamSpawnLoc);
+            });
+        }
+    }
+
+    @EventHandler
     public void onGameRebuild(BedwarsGameChangedStatusEvent reBuilding) {
         Game game = reBuilding.getGame();
         List<Team> teams = game.getAvailableTeams();
         if (game.getStatus() == GameStatus.REBUILDING) {
             Bukkit.getLogger().info("Making cages");
             for (Team t : teams) {
-                Location teamSpawnLoc = MiscUtils.readLocationFromString(game.getGameWorld(), "teams." + t.getName() + ".spawn");
+                Location teamSpawnLoc = t.getTeamSpawn();
                 Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
                     buildCage(teamSpawnLoc);
                 });
@@ -69,7 +84,7 @@ public class GameTeleportCageListener implements Listener {
         if (game.getStatus() == GameStatus.RUNNING) {
             Bukkit.getLogger().info("Removing cages");
             for (Team t : teams) {
-                Location teamSpawnLoc = MiscUtils.readLocationFromString(game.getGameWorld(), "teams." + t.getName() + ".spawn");
+                Location teamSpawnLoc = t.getTeamSpawn();
                 Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
                     removeCage(teamSpawnLoc);
                 });

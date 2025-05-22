@@ -1338,9 +1338,11 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             if (Main.getConfigurator().config.getBoolean("bossbar.use-xp-bar", false)) {
                 statusbar = new XPBar();
             } else {
-                statusbar = BossBarSelector.getBossBar(lobbySpawn);
+                //statusbar = BossBarSelector.getBossBar(lobbySpawn);
+                Bukkit.getLogger().info("Not using bossbar in lobby");
             }
             preparing = false;
+            Bukkit.getPluginManager().callEvent(new BedwarsGameEnabledEvent(this));
         }
     }
 
@@ -1357,6 +1359,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         } else {
             afterRebuild = GameStatus.DISABLED;
         }
+        Bukkit.getPluginManager().callEvent(new BedwarsGameDisabledEvent(this));
     }
 
     public void joinToGame(Player player) {
