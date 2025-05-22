@@ -98,6 +98,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
     private int pauseCountdown;
     private int gameTime;
     private int minPlayers;
+    private org.screamingsandals.bedwars.api.game.GameMode gameMode;
     private List<GamePlayer> players = new ArrayList<>();
     private World world;
     private List<GameStore> gameStore = new ArrayList<>();
@@ -292,12 +293,24 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         return minPlayers;
     }
 
+    public org.screamingsandals.bedwars.api.game.GameMode getGameMode() {
+        return gameMode;
+    }
+
+    public void setGameMode(org.screamingsandals.bedwars.api.game.GameMode gameMode) {
+        this.gameMode = gameMode;
+    }
+
     public boolean checkMinPlayers() {
         return players.size() >= getMinPlayers();
     }
 
     public void setMinPlayers(int minPlayers) {
         this.minPlayers = minPlayers;
+    }
+
+    public org.screamingsandals.bedwars.api.game.GameMode getGameMode(org.screamingsandals.bedwars.api.game.GameMode gameMode) {
+        return gameMode;
     }
 
     public int countPlayers() {

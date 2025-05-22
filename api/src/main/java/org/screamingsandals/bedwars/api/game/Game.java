@@ -49,6 +49,11 @@ public interface Game {
 	GameStatus getStatus();
 
     /**
+     * @return GameMode of the arena
+     */
+    org.screamingsandals.bedwars.api.game.GameMode getGameMode();
+
+    /**
      *
      */
 	void start();
