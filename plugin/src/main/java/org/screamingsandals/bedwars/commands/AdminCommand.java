@@ -120,7 +120,7 @@ public class AdminCommand extends BaseCommand {
 
                             player.sendMessage(spec);
 
-                            player.sendMessage("GameMode: "+ game.getGameMode().toString());
+                            player.sendMessage("GameMode: "+ game.getGameMode());
 
                             /*Location loc_lobby = game.getLobbySpawn();
                             String lobby = i18n("arena_info_lobby", false)

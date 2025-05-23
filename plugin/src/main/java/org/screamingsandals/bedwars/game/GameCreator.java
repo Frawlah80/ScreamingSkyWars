@@ -52,9 +52,9 @@ public class GameCreator {
         if (action.equalsIgnoreCase("spec")) {
             response = setSpecSpawn(player.getLocation());
         } else if (action.equalsIgnoreCase("normal")) {
-            response = setGameMode(org.screamingsandals.bedwars.api.game.GameMode.NORMAL);
+            response = setGameMode("NORMAL");
         } else if (action.equalsIgnoreCase("insane")) {
-            response = setGameMode(org.screamingsandals.bedwars.api.game.GameMode.INSANE);
+            response = setGameMode("INSANE");
         } else if (action.equalsIgnoreCase("pos1")) {
             response = setPos1(player.getLocation());
         } else if (action.equalsIgnoreCase("pos2")) {
@@ -517,7 +517,7 @@ public class GameCreator {
         return i18n("admin_command_min_players_set").replace("%min%", Integer.toString(minPlayers));
     }
 
-    public String setGameMode(org.screamingsandals.bedwars.api.game.GameMode gameMode) {
+    public String setGameMode(String gameMode) {
         game.setGameMode(gameMode);
         return "GameMode has been set to " + gameMode;
     }

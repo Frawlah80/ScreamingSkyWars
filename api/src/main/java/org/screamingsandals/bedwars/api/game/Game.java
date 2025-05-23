@@ -51,7 +51,7 @@ public interface Game {
     /**
      * @return GameMode of the arena
      */
-    org.screamingsandals.bedwars.api.game.GameMode getGameMode();
+    String getGameMode();
 
     /**
      *

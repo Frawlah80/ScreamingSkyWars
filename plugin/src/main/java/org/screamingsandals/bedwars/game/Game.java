@@ -98,7 +98,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
     private int pauseCountdown;
     private int gameTime;
     private int minPlayers;
-    private org.screamingsandals.bedwars.api.game.GameMode gameMode;
+    private String gameMode;
     private List<GamePlayer> players = new ArrayList<>();
     private World world;
     private List<GameStore> gameStore = new ArrayList<>();
@@ -293,11 +293,11 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         return minPlayers;
     }
 
-    public org.screamingsandals.bedwars.api.game.GameMode getGameMode() {
+    public String getGameMode() {
         return gameMode;
     }
 
-    public void setGameMode(org.screamingsandals.bedwars.api.game.GameMode gameMode) {
+    public void setGameMode(String gameMode) {
         this.gameMode = gameMode;
     }
 
@@ -309,7 +309,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
         this.minPlayers = minPlayers;
     }
 
-    public org.screamingsandals.bedwars.api.game.GameMode getGameMode(org.screamingsandals.bedwars.api.game.GameMode gameMode) {
+    public String getGameMode(String gameMode) {
         return gameMode;
     }
 
@@ -978,7 +978,7 @@ public class Game implements org.screamingsandals.bedwars.api.game.Game {
             game.name = configMap.getString("name");
             game.pauseCountdown = configMap.getInt("pauseCountdown");
             game.gameTime = configMap.getInt("gameTime");
-            game.gameMode = org.screamingsandals.bedwars.api.game.GameMode.valueOf(configMap.getString("gameMode"));
+            game.gameMode = configMap.getString("gameMode");
 
             String worldName = configMap.getString("world");
             game.world = Bukkit.getWorld(worldName);
